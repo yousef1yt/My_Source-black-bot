@@ -18,7 +18,7 @@
          "required": true
       },  
       "CHANNEL_SUDO": {
-        "description": "⦗ يوزر قناتك ⦘ ↫ يوزر قناتك الاشتراك الاجباري بدون @",
+        "description": "يـــوزر الاشتراك البــوت »〔 بــدون @ 〕مــع رفــع البــوت إشــراف فــي القنــاة",
         "value": "cecrr",
         "required": true
       },  
@@ -50,11 +50,6 @@
         "START_IMG_URL": {
             "description": "حط رابط صورة الستارت〔 رابط ميديا 〕..",
             "value": "https://graph.org/file/e29d3874ae4fed8fcd5b2.jpg",
-            "required": false
-        },
-        "CH_US": {
-            "description": "يـــوزر قنــاة البــوت »〔 بــدون @ 〕مــع رفــع البــوت إشــراف فــي القنــاة",
-            "value": "cecrr",
             "required": false
         },
         "LOGGER_ID": {
