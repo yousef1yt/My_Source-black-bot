@@ -13,7 +13,6 @@ from config import (BANNED_USERS, lyrical, YAFA_NAME,
                     YAFA_CHANNEL, CHANNEL_SUDO)
 import config
 from config import BANNED_USERS, lyrical
-from strings import get_command
 from YousefMusic import (Apple, Resso, SoundCloud, Spotify, Telegram,
                         YouTube, app)
 from YousefMusic.core.call import Zelzaly
