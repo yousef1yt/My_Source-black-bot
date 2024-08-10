@@ -1,36 +1,36 @@
-#▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒✯ ʑᴇʟᴢᴀʟ_ᴍᴜsɪᴄ ✯▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-#▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒✯  T.me/ZThon   ✯▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-#▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒✯ T.me/Zelzal_Music ✯▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-
-from pyrogram.enums import ParseMode
-
+from config import LOG, LOG_GROUP_ID
 from YousefMusic import app
 from YousefMusic.utils.database import is_on_off
-from config import OWNER_ID
 
 
 async def play_logs(message, streamtype):
-    if await is_on_off(2):
+    if await is_on_off(LOG):
+        if message.chat.username:
+            chatusername = f"@{message.chat.username}"
+        else:
+            chatusername = "Private Group"
+        if message.from_user:
+            useri = message.from_user.id
+            users = f"@{message.from_user.username}"
+            user = message.from_user.mention
+        else:
+            useri = "Channel Player"
+            users = "Channel Player"
+            user = "Channel Player"
         logger_text = f"""
-<b>- سيـدي المطـور 🧑🏻‍💻</b>
-<b>- هنـاك شخص يستخـدم الميـوزك حاليـاً 🎻</b>
-
-<b>- الاسم :</b> {message.from_user.mention}
-<b>- اليوزر :</b> @{message.from_user.username}
-<b>- ايدي المستخدم :</b> <code>{message.from_user.id}</code>
-
-<b>- اسم المجموعة :</b> {message.chat.title}
-<b>- يوزر المجموعة :</b> @{message.chat.username}
-<b>- ايدي المجموعة :</b> <code>{message.chat.id}</code>
-
-<b>- الطلب :</b> {message.text.split(None, 1)[1]}
-<b>- نوع التشغيل :</b> {streamtype}"""
-        if message.chat.id != OWNER_ID:
+**• بدا تشغيل اغنيه من البوت 🤖**
+**• الجروب ->** {message.chat.title} [`{message.chat.id}`]
+**• اسم المستخدم ->** {user}
+**• يوزر المستخدم ->** {users}
+**• ايدي المستخدم ->** {useri}
+**• لينك الجروب ->** {chatusername}
+**• نوع التشغيل ->** {message.text}
+**• نوع البث ->** {streamtype}"""
+        if message.chat.id != LOG_GROUP_ID:
             try:
                 await app.send_message(
-                    chat_id=OWNER_ID,
-                    text=logger_text,
-                    parse_mode=ParseMode.HTML,
+                    LOG_GROUP_ID,
+                    f"{logger_text}",
                     disable_web_page_preview=True,
                 )
             except:
