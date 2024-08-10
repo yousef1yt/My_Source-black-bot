@@ -44,8 +44,6 @@ async def check_is_joined(message):
         await message.reply_text("**◇︰ عذرا، عليك الانضمام الى قناة البوت أولاً :**",reply_markup=force_btn,parse_mode="markdown",disable_web_page_preview=False)
         return False
 
-# Command
-PLAY_COMMAND = get_command("PLAY_COMMAND")
           
 
 @app.on_message(
