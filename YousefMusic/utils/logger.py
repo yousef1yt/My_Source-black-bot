@@ -1,4 +1,4 @@
-from config import LOG, LOG_GROUP_ID
+from config import LOG, LOGGER_ID
 from YousefMusic import app
 from YousefMusic.utils.database import is_on_off
 
@@ -26,10 +26,10 @@ async def play_logs(message, streamtype):
 **• لينك الجروب ->** {chatusername}
 **• نوع التشغيل ->** {message.text}
 **• نوع البث ->** {streamtype}"""
-        if message.chat.id != LOG_GROUP_ID:
+        if message.chat.id != LOGGER_ID:
             try:
                 await app.send_message(
-                    LOG_GROUP_ID,
+                    LOGGER_ID,
                     f"{logger_text}",
                     disable_web_page_preview=True,
                 )
