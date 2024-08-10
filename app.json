@@ -16,6 +16,21 @@
             "description": "تـــوكـــن البـــوت - من بـوت فـاذر〔 @Botfather 〕..",
             "value": "7047183887:AAFA8pfgf9gt4vDy_1BnKzD2xLGPNUs4Rq8",
             "required": true
+      },  
+      "CHANNEL_SUDO": {
+        "description": "⦗ يوزر قناتك ⦘ ↫ يوزر قناتك الاشتراك الاجباري بدون @",
+        "value": "cecrr",
+        "required": true
+      },  
+      "YAFA_NAME": {
+        "description": "⦗ اسم قناتك ⦘ ↫ اسم قناتك الاشتراك الاجباري  ",
+        "value": "اضغط هنا للاشتراك",
+        "required": true
+      },  
+      "YAFA_CHANNEL": {
+        "description": "⦗ رابط قناتك ⦘ ↫ رابط قناتك الاشتراك الاجباري  ",
+        "value": "https://t.me/cecrr",
+        "required": true
         },
         "OWNER_ID": {
             "description": "ايـــدي المطـــور - مطـــور بـــوت الميـــوزك〔 ايدي حسابك 〕..",
