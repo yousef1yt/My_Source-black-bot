@@ -22,11 +22,6 @@
         "value": "cecrr",
         "required": true
       },  
-      "YAFA_NAME": {
-        "description": "⦗ اسم قناتك ⦘ ↫ اسم قناتك الاشتراك الاجباري  ",
-        "value": "اضغط هنا للاشتراك",
-        "required": true
-      },  
       "YAFA_CHANNEL": {
         "description": "⦗ رابط قناتك ⦘ ↫ رابط قناتك الاشتراك الاجباري  ",
         "value": "https://t.me/cecrr",
@@ -39,7 +34,7 @@
         },
         "STRING_SESSION": {
             "description": "كـــود تيـــرمكـــس - كـود جلسـة الحسـاب المساعـد لـ الميـوزك بايـروجـرام v2 مـن البـوت〔 @T66bot 〕.. ",
-            "value": "BAGi8fAAE9joiL1yjUiEwslcz9mwckZMIqYQE0m1q2v4YpdAoMC8H3D7YIwoUuzG5LJyy8sZV45igmaVYp5hk0B1Q0cmzFj_jCHOEqoGXJ2wMS8jOmyMuf3UGbHqNuSwzgUiPPEIrV8jKNhrdVNrIQ6HF6DWKBob8XaWsRwrjGgMZTkn4hM8w9k6GgbfUvHL3mETRWbwcnZ2EqGsoha_DlXi6oMGP3zbeB-4plFCXtQJPcNBzGOZYPF2wvQ1fLrn8iiyMQddlFG4hYoBsONVOCTmcWhk3k4uNOJZ5SJA9NdXXTJnw8mxhkmLYzENlTl2UPjgcEz6tKmTFqw0YSFUBOjjYFZs7QAAAAGqfwr9AA",
+            "value": "BAGi8fAAION8q4yYQ7L88rLq8-IbWHFVZAsd5JWvbn_4ykWNPkXi2LwD_dWVF9hJAdXLPhAAXxtdX6QpdzKRoHqkjma367P_YYBzpTr0CAT2y9zs_NVAtwwluLw3efAN6qWu6L56sn42dHTTQuF-8DjE3LiaO9geFdXC401dPY8L7z4QXsCt7H18ZNA9d01EzqqIh-q_8lNyAMtKHjEF_6B3kpV-W1Uerc5Warb3NIsI2-q1197CCGjqaGb1AwOtT81gj9BYW1GC_5F5BFcScqoU3ys1cFOU8glFxksZsgdqlbTAC5nWPgJSIi6QvTmvBrm-4bRLhF8caCpG_EW6CwcpAhZtaQAAAAGqfwr9AA",
             "required": true
         },
         "HEROKU_API_KEY": {
@@ -54,7 +49,7 @@
        },
         "START_IMG_URL": {
             "description": "حط رابط صورة الستارت〔 رابط ميديا 〕..",
-            "value": "",
+            "value": "https://graph.org/file/e29d3874ae4fed8fcd5b2.jpg",
             "required": false
         },
         "CH_US": {
