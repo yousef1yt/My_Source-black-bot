@@ -4,8 +4,8 @@
 
 from pyrogram.enums import ParseMode
 
-from ZelzalMusic import app
-from ZelzalMusic.utils.database import is_on_off
+from YousefMusic import app
+from YousefMusic.utils.database import is_on_off
 from config import LOGGER_ID
 
 
