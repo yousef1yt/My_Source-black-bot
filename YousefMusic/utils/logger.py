@@ -1,10 +1,10 @@
-from config import LOG, LOGGER_ID
+from config import LOGGER, LOGGER_ID
 from YousefMusic import app
 from YousefMusic.utils.database import is_on_off
 
 
 async def play_logs(message, streamtype):
-    if await is_on_off(LOG):
+    if await is_on_off(LOGGER):
         if message.chat.username:
             chatusername = f"@{message.chat.username}"
         else:
