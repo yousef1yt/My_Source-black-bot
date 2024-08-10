@@ -24,7 +24,7 @@ from YousefMusic.utils.formatters import formats
 from YousefMusic.utils.inline.play import (livestream_markup,
                                           playlist_markup,
                                           slider_markup, track_markup)
-from YousefMusic.utils.inline.playlist import botplaylist_markup
+from YousefMusic.utils.inline import (
 from YousefMusic.utils.logger import play_logs
 from YousefMusic.utils.stream.stream import stream
 
