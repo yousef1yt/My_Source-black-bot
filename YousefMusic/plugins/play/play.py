@@ -1,6 +1,5 @@
 import random
 import string
-from pyrogram import filters
 from ast import ExceptHandler
 from pyrogram import filters, Client
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InputMediaPhoto, Message
@@ -15,7 +14,6 @@ from YousefMusic.utils import seconds_to_min, time_to_seconds
 from YousefMusic.utils.channelplay import get_channeplayCB
 from YousefMusic.utils.decorators.language import languageCB
 from YousefMusic.utils.decorators.play import PlayWrapper
-from config import BANNED_USERS, lyrical, CHANNEL_SUDO, YAFA_NAME, YAFA_CHANNEL
 from YousefMusic.utils.formatters import formats
 from YousefMusic.utils.inline import (
     botplaylist_markup,
@@ -32,7 +30,7 @@ force_btn = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(   
-              text=f"YAFA_NAME", url=f"YAFA_CHANNEL",)                        
+              text=f". 𝖠 ' 𝟣𝟣𝟣 ..", url=f"t.me/cecrr",)                        
         ],        
     ]
 )
@@ -40,10 +38,10 @@ async def check_is_joined(message):
     try:
         userid = message.from_user.id
         user_name = message.from_user.first_name
-        status = await app.get_chat_member("CHANNEL_SUDO", userid)
+        status = await app.get_chat_member("cecrr", userid)
         return True
     except Exception:
-        await message.reply_text("عذرآ ، عمࢪي عليك الاشتࢪاك في قناة البوت اولآ ",reply_markup=force_btn)
+        await message.reply_text(f'┇عزيزي: {message.from_user.mention}\n┇أشتࢪك في قناة البوت أولاً.\n┇قناة البوت: @cecrr . ',reply_markup=force_btn,disable_web_page_preview=False)
         return False
 
 
