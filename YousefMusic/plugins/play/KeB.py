@@ -46,7 +46,7 @@ async def aTari(client: Client, message: Message):
                 ],
             ]
         )
-                             )
+                             
 #حقو.ق س.ورس اك.سي
 @app.on_message(command(["فويز","‹ فويز ›"]) & filters.private)
 async def aTari(client: Client, message: Message):
