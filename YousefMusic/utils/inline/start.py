@@ -28,7 +28,7 @@ def start_panel(_):
                 text="‹ مطور السورس ›", url=f"https://t.me/y_o_v"
             ),
         ]
-    ]
+    [
     return buttons
 
 
