@@ -32,7 +32,7 @@ from YousefMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, a
 from YousefMusic import app
 from random import  choice, randint
 #اتار.ي
-lnk= "" +config.SUPPORT_CHANNEL
+lnk= "" +config.SUPPORT_CHAT
           
 @app.on_message(command(["غنيلي","‹ غنيلي ›"]) & filters.group)
 async def aTari(client: Client, message: Message):
