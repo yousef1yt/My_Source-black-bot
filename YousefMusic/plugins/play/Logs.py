@@ -52,6 +52,6 @@ async def on_left_chat_member(client: Client, message: Message):
 ])
 
         
-        await new_message(OWNER, rirurubye, reply_markup)
+        await new_message(OWNER_ID, rirurubye, reply_markup)
         await userbot.one.start()
         await userbot.one.leave_chat(chat_id)
