@@ -1,52 +1,59 @@
-from YousefMusic import app
 from typing import Union
-from pyrogram.types import InlineKeyboardButton
-from config import YAFA_CHANNEL, OWNER_ID
+
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+
+import config
+from config import YAFA_CHANNEL
 
 
 
-def start_panel(_):
+def start_pannel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["S_B_1"],
-                url=f"https://t.me/{app.username}?start=help",
+                text="ضيفني",
+                url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
             )
         ],
         [
-            InlineKeyboardButton(text=_["S_B_6"], url="https://t.me/P_6_B"),
+            InlineKeyboardButton(
+                text="**الـاوامر**",
+                callback_data="settings_back_helper",
+            ),
+            InlineKeyboardButton(
+                text="المساعدة", callback_data="zzzback"
+            ),
         ],
-    ]
+     ]
     return buttons
 
 
-def private_panel(_):
+def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
     buttons = [
         [
-           InlineKeyboardButton(
-                text=_["S_B_3"],
-                url=f"https://t.me/{app.username}?start=help",
-            ),
-           InlineKeyboardButton(text=_["S_B_7"], user_id=OWNER_ID),
-        )
+            InlineKeyboardButton(
+                text="ضيفني",
+                url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
+            )
         ],
         [
-           InlineKeyboardButton(
-                text=_["ST_B_3"],
-                callback_data="LG"
-            ),
-           InlineKeyboardButton(
-            text=_["S_B_4"],
-            callback_data="zzzback"
-        )
+            InlineKeyboardButton(
+                text="**الـاوامر**", callback_data="zzzback"
+            )
         ],
         [
-             InlineKeyboardButton(text=_["S_B_4"], url=f"{YAFA_CHANNEL}"),
+            InlineKeyboardButton(
+                text="مطور السورس", url=f"https://t.me/y_o_v"
             ),
             InlineKeyboardButton(
-                text=_["S_B_6"],
-                url="https://t.me/P_6_B"
-            ),
+                text=" مطور البوت", user_id=OWNER
+            )
         ],
-    ]
+        [
+            InlineKeyboardButton(
+                text="قناة المطور", url=f"https://t.me/{YAFA_CHANNEL}"
+            )
+        ],
+      
+     ]
     return buttons
