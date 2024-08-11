@@ -6,7 +6,7 @@ from config import SUPPORT_CHANNEL, YAFA_CHANNEL, OWNER_ID
 
 
 def start_panel(_):
-    buttons = [
+    buttons = ),
         [
             InlineKeyboardButton(
                 text=_["S_B_1"],
