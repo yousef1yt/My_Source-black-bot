@@ -32,7 +32,7 @@ async def huhh(client: Client, message: Message):
                  
              ],[ 
             InlineKeyboardButton(
-                        "‹ - 𝙔𝙤𝙪𝙨𝙚𝙛 ›", url=f"https://t.me/y_o_v"), 
+                        "‹ 𓏺 َ𝗬𝗼𝘂𝘀𝗲𝗳 . ›", url=f"https://t.me/y_o_v"), 
                       
              ],[ 
             InlineKeyboardButton(
@@ -64,13 +64,13 @@ async def deev(client: Client, message: Message):
      title = message.chat.title if message.chat.title else message.chat.first_name
      chat_title = f"User : {message.from_user.mention} \nChat Name : {title}" if message.from_user else f"Chat Name : {message.chat.title}"
      try:
-      await client.send_message(username, f"**هناك شخص بالحاجه اليك عزيزي المطور**\n{chat_title}\nChat Id : `{message.chat.id}`",
+      await client.send_message(username, f"هناك شخص بالحاجه اليك عزيزي المطور\n{chat_title}\nChat Id : `{message.chat.id}`",
       reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"{title}", url=f"{link}")]]))
      except:
        pass
      await message.reply_photo(
      photo=photo,
-     caption=f"**𝙳𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛 𝙽𝚊𝚖𝚎 : {name}** \n**𝚍𝚎𝚟 𝚞𝚜𝚎𝚛 𝚗𝚊𝚖𝚎 : @{username}**\n**{bio}**",
+     caption=f"𝙳𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛 𝙽𝚊𝚖𝚎 : {name} \n𝚍𝚎𝚟 𝚞𝚜𝚎𝚛 𝚗𝚊𝚖𝚎 : @{username}\n{bio}",
      reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"{name}", user_id=f"{user_id}")]]))
      try:
        os.remove(photo)
