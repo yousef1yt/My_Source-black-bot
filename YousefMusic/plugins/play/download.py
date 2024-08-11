@@ -18,7 +18,6 @@ from YousefMusic import app
 import asyncio
 import os
 import time
-import wget
 from urllib.parse import urlparse
 from pyrogram import filters
 from pyrogram.types import Message
