@@ -27,9 +27,7 @@ def private_panel(_):
                 text=_["S_B_3"],
                 url=f"https://t.me/{app.username}?start=help",
             ),
-           InlineKeyboardButton(
-            text=_["S_B_5"],
-            url=f"OWNER_ID",
+           InlineKeyboardButton(text=_["S_B_7"], user_id=OWNER_ID),
         )
         ],
         [
