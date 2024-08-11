@@ -41,9 +41,7 @@ def private_panel(_):
         )
         ],
         [
-             InlineKeyboardButton(
-                text=_["S_B_9"],
-                url=f"YAFA_CHANNEL",
+             InlineKeyboardButton(text=_["S_B_4"], url=f"{YAFA_CHANNEL}"),
             ),
             InlineKeyboardButton(
                 text=_["S_B_6"],
