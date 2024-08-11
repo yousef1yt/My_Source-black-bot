@@ -2,7 +2,7 @@
 from YousefMusic import app
 from typing import Union
 from pyrogram.types import InlineKeyboardButton
-from config import SUPPORT_CHANNEL, YAFA_CHANNEL, OWNER_ID
+from config import SUPPORT_CHANNEL, SUPPORT_CHAT, OWNER_ID
 
 
 def start_panel(_):
@@ -18,15 +18,17 @@ def start_panel(_):
             InlineKeyboardButton(text=_["S_B_4"], url=f"{SUPPORT_CHANNEL}"),
         ],
         [
-            InlineKeyboardButton(text=_["S_B_3"], url=f"{YAFA_CHANNEL}"),
+            InlineKeyboardButton(text=_["S_B_3"], url=f"{SUPPORT_CHAT}"),
         ],
-            
+        [
             InlineKeyboardButton(
-                text="‹ مطور البوت ›", user_id=OWNER_ID),
-            
+                text="‹ المطور ›", url=f"https://t.me/y_o_v"
+            ),
             InlineKeyboardButton(
-                text="‹ مطور السورس ›", url=f"https://t.me/y_o_v"
-            ),                             
+                text="‹ تنصيب بوت ›", url=f"https://t.me/y_o_v"
+            ),
+        ],
+    ]
     return buttons
 
 
@@ -35,7 +37,7 @@ def private_panel(_, OWNER_ID: Union[bool, int] = None):
         [InlineKeyboardButton(text=_["S_B_8"], callback_data="zzzback")],
         [
             InlineKeyboardButton(text=_["S_B_4"], url=f"{SUPPORT_CHANNEL}"),
-            InlineKeyboardButton(text=_["S_B_3"], url=f"{YAFA_CHANNEL}"),
+            InlineKeyboardButton(text=_["S_B_3"], url=f"{SUPPORT_CHAT}"),
         ],
         [
             InlineKeyboardButton(
@@ -44,11 +46,9 @@ def private_panel(_, OWNER_ID: Union[bool, int] = None):
             )
         ],
         [
-            
             InlineKeyboardButton(
-                text="‹ مطور البوت ›", user_id=OWNER_ID),
-       ],
-       [  
+                text="‹ المطور ›", url=f"owner_id"
+            ),
             InlineKeyboardButton(
                 text="‹ مطور السورس ›", url=f"https://t.me/y_o_v"
             ),
@@ -68,7 +68,7 @@ def alive_panel(_):
             InlineKeyboardButton(
                 text="- اضفني .", url=f"https://t.me/{app.username}?startgroup=true"
             ),
-            InlineKeyboardButton(text=_["S_B_3"], url=f"{YAFA_CHANNEL}"),
+            InlineKeyboardButton(text=_["S_B_3"], url=f"{SUPPORT_CHAT}"),
         ],
     ]
     return buttons
