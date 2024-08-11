@@ -25,7 +25,7 @@ def start_panel(_):
             InlineKeyboardButton(
                 text="‹ تنصيب بوت ›", url=f"https://t.me/y_o_v"
             ),
-        ],
+        ]
     [
     return buttons
 
