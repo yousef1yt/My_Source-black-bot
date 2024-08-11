@@ -23,7 +23,7 @@ def start_panel(_):
             
             InlineKeyboardButton(
                 text="‹ مطور البوت ›", user_id=OWNER_ID),
-            ),
+            
             InlineKeyboardButton(
                 text="‹ مطور السورس ›", url=f"https://t.me/y_o_v"
             ),
