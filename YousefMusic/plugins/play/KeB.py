@@ -37,7 +37,7 @@ lnk= "" +config.SUPPORT_CHANNEL
 @app.on_message(command(["مطور السورس","‹ مطور السورس ›"]) & filters.private)
 async def aTari(client: Client, message: Message):
     rl = random.randint(2,2301)
-    url = f"https://t.me/c/2011258224/2555/{rl}"
+    url = f"https://t.me/vlvzl/21676}"
     reply_markup=InlineKeyboardMarkup(
             [
                 [
