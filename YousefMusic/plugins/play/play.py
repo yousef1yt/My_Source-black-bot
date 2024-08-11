@@ -23,7 +23,7 @@ from YousefMusic.utils.inline import (
 from YousefMusic.utils.logger import play_logs
 from YousefMusic.utils.stream.stream import stream
 from config import BANNED_USERS, lyrical
-from config import  CHANNEL_SUDO,
+from config import  CHANNEL_SUDO
 from pyrogram.errors import UserNotParticipant, ChatAdminRequired, ChatWriteForbidden
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
