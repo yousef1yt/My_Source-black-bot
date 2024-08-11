@@ -21,7 +21,7 @@ def start_pannel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
                 callback_data="zzzback",
             ),
             InlineKeyboardButton(
-                text="المساعدة", callback_data="zzzback"
+                text="المساعدة", callback_data="settings_helper"
             ),
         ],
      ]
