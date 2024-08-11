@@ -29,7 +29,6 @@ import asyncio
 from YousefMusic.utils.extraction import extract_user
 import asyncio
 import os
-import wget
 from pyrogram import filters
 from pyrogram.types import Message
 from youtubesearchpython import SearchVideos
@@ -45,7 +44,6 @@ from pyrogram import filters, Client
 from youtubesearchpython import SearchVideos
 from yt_dlp import YoutubeDL
 from YousefMusic import app
-import wget
 
 # Define a dictionary to track the last query timestamp for each user
 user_last_CallbackQuery_time = {}
