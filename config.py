@@ -51,6 +51,8 @@ YAFA_NAME = getenv("YAFA_NAME", "اضغط هنا للاشترااك")
 YAFA_CHANNEL = getenv("YAFA_CHANNEL", "https://t.me/cecrr")# Fill this variable if your upstream repository is private
 SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/P_6_B")
 SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/cecrr")
+CHANNEL_NAME = getenv("CHANNEL_NAME", "• . 𝖠 ' 𝟣𝟣𝟣 . •")
+CHANNEL_LINK = getenv("CHANNEL_LINK", "cecrr)
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = safe_getenv_bool("AUTO_LEAVING_ASSISTANT", False)
