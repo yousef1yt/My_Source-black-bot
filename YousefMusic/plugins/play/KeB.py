@@ -34,11 +34,10 @@ from random import  choice, randint
 #بلاك
 lnk= "" +config.SUPPORT_CHANNEL
           
-@app.on_message(command(["غنيلي","‹ غنيلي ›"]) & filters.private)
+@app.on_message(command(["مطور السورس","‹ مطور السورس ›"]) & filters.private)
 async def aTari(client: Client, message: Message):
     rl = random.randint(2,2301)
-    url = f"https://t.me/AudiosWaTaN/{rl}"
-    await message.reply_voice(url,caption="≭︰تم اختيار اغنية لك .",
+    url = f"https://t.me/c/2011258224/2555/{rl}"
     reply_markup=InlineKeyboardMarkup(
             [
                 [
