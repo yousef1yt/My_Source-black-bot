@@ -11,7 +11,7 @@ from typing import Union
 
 from pyrogram.types import InlineKeyboardButton
 
-from config import GITHUB_REPO, SUPPORT_CHANNEL, SUPPORT_CHAT
+from config import SUPPORT_CHANNEL, SUPPORT_CHAT
 from YousefMusic import app
 
 
@@ -34,7 +34,7 @@ def start_pannel(_):
                     text=" ‹ السورس › ", url=f"{SUPPORT_CHANNEL}"
                 ),
                 InlineKeyboardButton(
-                    text=" ‹ قناة البوت › ", url=f"{SUPPORT_GROUP}"
+                    text=" ‹ قناة البوت › ", url=f"{SUPPORT_CHAT}"
                 ),
             ]
         )
@@ -47,11 +47,11 @@ def start_pannel(_):
                     )
                 ]
             )
-        if SUPPORT_GROUP:
+        if SUPPORT_CHAT:
             buttons.append(
                 [
                     InlineKeyboardButton(
-                        text=" ‹ قناة البوت › ", url=f"{SUPPORT_GROUP}"
+                        text=" ‹ قناة البوت › ", url=f"{SUPPORT_CHAT}"
                     )
                 ]
             )
@@ -66,14 +66,14 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
             )
         ]
     ]
-    if SUPPORT_CHANNEL and SUPPORT_GROUP:
+    if SUPPORT_CHANNEL and SUPPORT_CHAT:
         buttons.append(
             [
                 InlineKeyboardButton(
                     text=" ‹ السورس › ", url=f"{SUPPORT_CHANNEL}"
                 ),
                 InlineKeyboardButton(
-                    text=" ‹ قناة البوت › ", url=f"{SUPPORT_GROUP}"
+                    text=" ‹ قناة البوت › ", url=f"{SUPPORT_CHAT}"
                 ),
             ]
         )
@@ -86,11 +86,11 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
                     )
                 ]
             )
-        if SUPPORT_GROUP:
+        if SUPPORT_CHAT:
             buttons.append(
                 [
                     InlineKeyboardButton(
-                        text=" ‹ قناة البوت › ", url=f"{SUPPORT_GROUP}"
+                        text=" ‹ قناة البوت › ", url=f"{SUPPORT_CHAT}"
                     )
                 ]
             )
@@ -102,21 +102,21 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
             )
         ]
     )
-    if GITHUB_REPO and OWNER:
+    if SUPPORT_CHAT and OWNER:
         buttons.append(
             [
                 InlineKeyboardButton(text=" ‹ المطور › ", user_id=OWNER),
                 InlineKeyboardButton(
-                    text=_["S_B_6"], url=f"{SUPPORT_GROUP}"
+                    text=_["S_B_6"], url=f"{SUPPORT_CHAT}"
                 ),
             ]
         )
     else:
-        if GITHUB_REPO:
+        if SUPPORT_CHAT:
             buttons.append(
                 [
                     InlineKeyboardButton(
-                        text=_["S_B_6"], url=f"{SUPPORT_GROUP}"
+                        text=_["S_B_6"], url=f"{SUPPORT_CHAT}"
                     ),
                 ]
             )
