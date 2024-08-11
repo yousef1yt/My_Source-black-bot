@@ -1,6 +1,6 @@
 import asyncio
 from strings.filters import command
-from MatrixMusic.utils.decorators import AdminActual
+from YousefMusic.utils.decorators import AdminActual
 from pyrogram.types import (
     CallbackQuery,
     InlineKeyboardButton,
@@ -10,7 +10,7 @@ from pyrogram.types import (
     InputMediaPhoto,
     Message,
 )
-from MatrixMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
+from YousefMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from config import OWNER_ID
