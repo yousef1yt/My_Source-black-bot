@@ -13,6 +13,7 @@ as you want or you can collabe if you have new ideas.
 from .help import *
 from .extras import *
 from .speed import *
+from .help import *
 from .play import *
 from .queue import *
 from .settings import *
