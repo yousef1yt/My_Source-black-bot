@@ -23,38 +23,38 @@ from YousefMusic.utils.inline import (
 from YousefMusic.utils.logger import play_logs
 from YousefMusic.utils.stream.stream import stream
 from config import BANNED_USERS, lyrical
-from config import  CHANNEL_SUDO, YAFA_NAME, YAFA_CHANNEL,
+from config import  CHANNEL_SUDO,
 from pyrogram.errors import UserNotParticipant, ChatAdminRequired, ChatWriteForbidden
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
 async def must_join_channel(app, msg):
-    if not YAFA_CHANNEL:
+    if not CHANNEL_SUDO:
         return
     try:
         if msg.from_user is None:
             return
         try:
-            await app.get_chat_member(YAFA_CHANNEL, msg.from_user.id)
+            await app.get_chat_member(CHANNEL_SUDO, msg.from_user.id)
         except UserNotParticipant:
-            if YAFA_CHANNEL.isalpha():
-                link = "https://t.me/" + YAFA_CHANNEL
+            if CHANNEL_SUDO.isalpha():
+                link = "https://t.me/" + CHANNEL_SUDO
             else:
-                chat_info = await app.get_chat(YAFA_CHANNEL)
+                chat_info = await app.get_chat(CHANNEL_SUDO)
                 link = chat_info.invite_link
             try:
                 await msg.reply(
-                    f"~︙عليك الأشتراك في قناة البوت \n~︙قناة البوت : @{YAFA_CHANNEL}.",
+                    f"~︙عليك الأشتراك في قناة البوت \n~︙قناة البوت : @{CHANNEL_SUDO}.",
                     disable_web_page_preview=True,
                     reply_markup=InlineKeyboardMarkup([
-                        [InlineKeyboardButton("< Source >", url=link)]
+                        [InlineKeyboardButton("< اضغط هنا للاشتراك >", url=link)]
                     ])
                 )
                 await msg.stop_propagation()
             except ChatWriteForbidden:
                 pass
     except ChatAdminRequired:
-        print(f"I m not admin in the MUST_JOIN chat {YAFA_CHANNEL}!")
+        print(f"I m not admin in the MUST_JOIN chat {CHANNEL_SUDO}!")
 
 
 # استخدام دالة must_join_channel في دالة التشغيل المخصصة
