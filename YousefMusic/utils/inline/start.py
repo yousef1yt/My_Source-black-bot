@@ -20,7 +20,7 @@ def start_panel(_):
         [
             InlineKeyboardButton(text=_["S_B_3"], url=f"{YAFA_CHANNEL}"),
         ],
-        [   ),
+            ),
             InlineKeyboardButton(
                 text="‹ مطور البوت ›", user_id=OWNER_ID),
             ),
