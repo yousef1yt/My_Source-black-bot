@@ -9,7 +9,6 @@ import config
 from YousefMusic import app
 from YousefMusic.misc import _boot_
 from YousefMusic.plugins.sudo.sudoers import sudoers_list
-from YousefMusic.plugins.additions.keyboard import devs
 from YousefMusic.utils.database import (
     add_served_chat,
     add_served_user,
