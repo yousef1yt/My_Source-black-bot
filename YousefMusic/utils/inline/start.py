@@ -26,8 +26,8 @@ def start_panel(_):
             InlineKeyboardButton(
                 text="‹ مطور السورس ›", url=f"https://t.me/y_o_v"
             ),
-        ],
-    ],
+    ],     ],
+    [
     return buttons
 
 
