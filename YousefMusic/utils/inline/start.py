@@ -20,7 +20,7 @@ def start_panel(_):
         [
             InlineKeyboardButton(text=_["S_B_3"], url=f"{SUPPORT_CHAT}"),
         ],
-        [
+        [   ],
             InlineKeyboardButton(text=_["S_B_7"], user_id=OWNER_ID),
             InlineKeyboardButton(
                 text="‹ تنصيب بوت ›", url=f"https://t.me/y_o_v"
