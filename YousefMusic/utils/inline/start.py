@@ -1,59 +1,74 @@
+
+from YousefMusic import app
 from typing import Union
-
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-
-import config
-from config import YAFA_CHANNEL
+from pyrogram.types import InlineKeyboardButton
+from config import SUPPORT_CHANNEL, SUPPORT_CHAT, OWNER_ID
 
 
-
-def start_pannel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
+def start_panel(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text="ضيفني",
-                url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
+                text=_["S_B_1"],
+                url=f"https://t.me/{app.username}?start=help",
             )
         ],
         [
+            InlineKeyboardButton(text=_["S_B_2"], callback_data="settings_helper"),
+            InlineKeyboardButton(text=_["S_B_4"], url=f"{SUPPORT_CHANNEL}"),
+        ],
+        [
+            InlineKeyboardButton(text=_["S_B_3"], url=f"{SUPPORT_CHAT}"),
+        ],
+        [
             InlineKeyboardButton(
-                text="**الـاوامر**",
-                callback_data="zzzback",
+                text="‹ المطور ›", url=f"https://t.me/y_o_v"
             ),
             InlineKeyboardButton(
-                text="المساعدة", callback_data="settings_helper"
+                text="‹ مطور السورس ›", url=f"https://t.me/y_o_v"
             ),
         ],
-     ]
+    ]
     return buttons
 
 
-def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
+def private_panel(_, OWNER_ID: Union[bool, int] = None):
+    buttons = [
+        [InlineKeyboardButton(text=_["S_B_8"], callback_data="zzzback")],
+        [
+            InlineKeyboardButton(text=_["S_B_4"], url=f"{SUPPORT_CHANNEL}"),
+            InlineKeyboardButton(text=_["S_B_3"], url=f"{SUPPORT_CHAT}"),
+        ],
+        [
+            InlineKeyboardButton(
+                text=_["S_B_5"],
+                url=f"https://t.me/{app.username}?startgroup=true",
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="‹ المطور ›", url=f"https://t.me/y_o_v"
+            ),
+            InlineKeyboardButton(
+                text="‹ مطور السورس ›", url=f"https://t.me/y_o_v"
+            ),
+        ],
+        [
+            InlineKeyboardButton(text=_["S_B_7"], user_id=),
+            InlineKeyboardButton(text=_["S_B_6"], url=f"https://t.me/y_o_v"),
+        ] if OWNER_ID else [],
+        [InlineKeyboardButton(text=_["ST_B_6"], callback_data="LG")],
+    ]
+    return buttons
+
+
+def alive_panel(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text="ضيفني",
-                url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
-            )
-        ],
-        [
-            InlineKeyboardButton(
-                text="**الـاوامر**", callback_data="zzzback"
-            )
-        ],
-        [
-            InlineKeyboardButton(
-                text="مطور السورس", url=f"https://t.me/y_o_v"
+                text="- اضفني .", url=f"https://t.me/{app.username}?startgroup=true"
             ),
-            InlineKeyboardButton(
-                text=" مطور البوت", user_id=OWNER
-            )
+            InlineKeyboardButton(text=_["S_B_3"], url=f"{SUPPORT_CHAT}"),
         ],
-        [
-            InlineKeyboardButton(
-                text="قناة المطور", url=f"https://t.me/{YAFA_CHANNEL}"
-            )
-        ],
-      
-     ]
+    ]
     return buttons
