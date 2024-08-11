@@ -10,7 +10,6 @@ from pyrogram.types import (
     InputMediaVideo,
     Message,
 )
-import wget
 from pyrogram import filters
 from pyrogram.types import Message
 from youtubesearchpython import SearchVideos
