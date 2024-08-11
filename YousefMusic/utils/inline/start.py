@@ -23,7 +23,7 @@ def start_pannel(_):
                 url=f"https://t.me/{app.username}?start=help",
             ),
             InlineKeyboardButton(
-                text=" ‹ اوامر البوت › ", callback_data="settings_helper"
+                text=" ‹ اوامر البوت › ", callback_data="zzzback"
             ),
         ],
     ]
@@ -62,7 +62,7 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
     buttons = [
         [
             InlineKeyboardButton(
-                text=" ‹ اوامر البوت › ", callback_data="settings_back_helper"
+                text=" ‹ اوامر البوت › ", callback_data="zzzback"
             )
         ]
     ]
