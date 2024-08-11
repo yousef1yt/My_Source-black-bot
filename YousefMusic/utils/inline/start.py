@@ -44,7 +44,7 @@ def private_panel(_, OWNER_ID: Union[bool, int] = None):
                 text=_["S_B_5"],
                 url=f"https://t.me/{app.username}?startgroup=true",
             )
-        [,
+        
             ),
             InlineKeyboardButton(
                 text="‹ مطور البوت ›", user_id=OWNER_ID),
