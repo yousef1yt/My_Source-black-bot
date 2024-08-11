@@ -26,7 +26,7 @@ def start_panel(_):
                 text="‹ تنصيب بوت ›", url=f"https://t.me/y_o_v"
             ),
         ]
-    [
+    ,[
     return buttons
 
 
