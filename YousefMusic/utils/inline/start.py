@@ -1,134 +1,74 @@
-#
-# Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
-#
-# This file is part of < https://github.com/TeamYukki/AlexaMusicBot > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/TeamYukki/AlexaMusicBot/blob/master/LICENSE >
-#
-# All rights reserved.
 
-from typing import Union
-
-from pyrogram.types import InlineKeyboardButton
-
-from config import SUPPORT_CHANNEL, SUPPORT_CHAT
 from YousefMusic import app
+from typing import Union
+from pyrogram.types import InlineKeyboardButton
+from config import SUPPORT_CHANNEL, YAFA_CHANNEL, OWNER_ID
 
 
-def start_pannel(_):
+def start_panel(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text=" ‹ اضفني لمجموعتك › ",
+                text=_["S_B_1"],
                 url=f"https://t.me/{app.username}?start=help",
+            )
+        ],
+        [
+            InlineKeyboardButton(text=_["S_B_2"], callback_data="settings_helper"),
+            InlineKeyboardButton(text=_["S_B_4"], url=f"{SUPPORT_CHANNEL}"),
+        ],
+        [
+            InlineKeyboardButton(text=_["S_B_3"], url=f"{YAFA_CHANNEL}"),
+        ],
+        [
+            InlineKeyboardButton(
+                text="‹ مطور البوت ›", url=f"https://t.me/y_o_v"
             ),
             InlineKeyboardButton(
-                text=" ‹ اوامر البوت › ", callback_data="zzzback"
+                text="‹ مطور السورس ›", url=f"https://t.me/y_o_v"
             ),
         ],
     ]
-    if SUPPORT_CHANNEL and SUPPORT_GROUP:
-        buttons.append(
-            [
-                InlineKeyboardButton(
-                    text=" ‹ السورس › ", url=f"{SUPPORT_CHANNEL}"
-                ),
-                InlineKeyboardButton(
-                    text=" ‹ قناة البوت › ", url=f"{SUPPORT_CHAT}"
-                ),
-            ]
-        )
-    else:
-        if SUPPORT_CHANNEL:
-            buttons.append(
-                [
-                    InlineKeyboardButton(
-                        text=" ‹ السورس › ", url=f"{SUPPORT_CHANNEL}"
-                    )
-                ]
-            )
-        if SUPPORT_CHAT:
-            buttons.append(
-                [
-                    InlineKeyboardButton(
-                        text=" ‹ قناة البوت › ", url=f"{SUPPORT_CHAT}"
-                    )
-                ]
-            )
     return buttons
 
 
-def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
+def private_panel(_, OWNER_ID: Union[bool, int] = None):
+    buttons = [
+        [InlineKeyboardButton(text=_["S_B_8"], callback_data="zzzback")],
+        [
+            InlineKeyboardButton(text=_["S_B_4"], url=f"{SUPPORT_CHANNEL}"),
+            InlineKeyboardButton(text=_["S_B_3"], url=f"{YAFA_CHANNEL}"),
+        ],
+        [
+            InlineKeyboardButton(
+                text=_["S_B_5"],
+                url=f"https://t.me/{app.username}?startgroup=true",
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="‹ مطور البوت ›", url=f"https://t.me/y_o_v"
+            ),
+            InlineKeyboardButton(
+                text="‹ مطور السورس ›", url=f"https://t.me/y_o_v"
+            ),
+        ],
+        [
+            InlineKeyboardButton(text=_["S_B_7"], user_id=OWNER_ID),
+            InlineKeyboardButton(text=_["S_B_6"], url=f"https://t.me/y_o_v"),
+        ] if OWNER_ID else [],
+        [InlineKeyboardButton(text=_["ST_B_6"], callback_data="LG")],
+    ]
+    return buttons
+
+
+def alive_panel(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text=" ‹ اوامر البوت › ", callback_data="zzzback"
-            )
-        ]
+                text="- اضفني .", url=f"https://t.me/{app.username}?startgroup=true"
+            ),
+            InlineKeyboardButton(text=_["S_B_3"], url=f"{YAFA_CHANNEL}"),
+        ],
     ]
-    if SUPPORT_CHANNEL and SUPPORT_CHAT:
-        buttons.append(
-            [
-                InlineKeyboardButton(
-                    text=" ‹ السورس › ", url=f"{SUPPORT_CHANNEL}"
-                ),
-                InlineKeyboardButton(
-                    text=" ‹ قناة البوت › ", url=f"{SUPPORT_CHAT}"
-                ),
-            ]
-        )
-    else:
-        if SUPPORT_CHANNEL:
-            buttons.append(
-                [
-                    InlineKeyboardButton(
-                        text=" ‹ السورس › ", url=f"{SUPPORT_CHANNEL}"
-                    )
-                ]
-            )
-        if SUPPORT_CHAT:
-            buttons.append(
-                [
-                    InlineKeyboardButton(
-                        text=" ‹ قناة البوت › ", url=f"{SUPPORT_CHAT}"
-                    )
-                ]
-            )
-    buttons.append(
-        [
-            InlineKeyboardButton(
-                text=" ‹ اضفني لمجموعتك › ",
-                url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
-            )
-        ]
-    )
-    if SUPPORT_CHAT and OWNER:
-        buttons.append(
-            [
-                InlineKeyboardButton(text=" ‹ المطور › ", user_id=OWNER),
-                InlineKeyboardButton(
-                    text=_["S_B_6"], url=f"{SUPPORT_CHAT}"
-                ),
-            ]
-        )
-    else:
-        if SUPPORT_CHAT:
-            buttons.append(
-                [
-                    InlineKeyboardButton(
-                        text=_["S_B_6"], url=f"{SUPPORT_CHAT}"
-                    ),
-                ]
-            )
-        if OWNER:
-            buttons.append(
-                [
-                    InlineKeyboardButton(
-                        text=" ‹ المطور › ", user_id=OWNER
-                    ),
-                ]
-            )
-    buttons.append(
-        [InlineKeyboardButton(text=_["ST_B_6"], callback_data="LG")]
-    )
     return buttons
