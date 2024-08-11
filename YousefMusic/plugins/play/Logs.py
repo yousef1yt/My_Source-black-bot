@@ -4,7 +4,7 @@
 from pyrogram import Client, filters
 from YousefMusic.core.userbot import Userbot
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
-from config import LOGGER_ID as LOG_ID
+from config import OWNER_ID 
 from YousefMusic import app
 
 
@@ -32,7 +32,7 @@ async def on_new_chat_members(client: Client, message: Message):
 ])
 
         
-        await new_message(LOG_ID, riruru, reply_markup)
+        await new_message(OWNER_ID, riruru, reply_markup)
 
 @app.on_message(filters.left_chat_member)
 async def on_left_chat_member(client: Client, message: Message):
@@ -52,6 +52,6 @@ async def on_left_chat_member(client: Client, message: Message):
 ])
 
         
-        await new_message(LOG_ID, rirurubye, reply_markup)
+        await new_message(OWNER, rirurubye, reply_markup)
         await userbot.one.start()
         await userbot.one.leave_chat(chat_id)
