@@ -11,7 +11,7 @@ from typing import Union
 
 from pyrogram.types import InlineKeyboardButton
 
-from config import  SUPPORT_CHANNEL, SUPPORT_GROUP
+from config import  SUPPORT_CHANNEL, SUPPORT_CHAT
 from YousefMusic import app
 
 
@@ -34,7 +34,7 @@ def start_pannel(_):
                     text=" ‹ السورس › ", url=f"{SUPPORT_CHANNEL}"
                 ),
                 InlineKeyboardButton(
-                    text=" ‹ قناة البوت › ", url=f"{SUPPORT_GROUP}"
+                    text=" ‹ قناة البوت › ", url=f"{SUPPORT_CHAT}"
                 ),
             ]
         )
@@ -51,7 +51,7 @@ def start_pannel(_):
             buttons.append(
                 [
                     InlineKeyboardButton(
-                        text=" ‹ قناة البوت › ", url=f"{SUPPORT_GROUP}"
+                        text=" ‹ قناة البوت › ", url=f"{SUPPORT_CHAT}"
                     )
                 ]
             )
@@ -73,7 +73,7 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
                     text=" ‹ السورس › ", url=f"{SUPPORT_CHANNEL}"
                 ),
                 InlineKeyboardButton(
-                    text=" ‹ قناة البوت › ", url=f"{SUPPORT_GROUP}"
+                    text=" ‹ قناة البوت › ", url=f"{SUPPORT_CHAT}"
                 ),
             ]
         )
@@ -82,7 +82,7 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
             buttons.append(
                 [
                     InlineKeyboardButton(
-                        text=" ‹ السورس › ", url=f"{SUPPORT_CHANNEL}"
+                        text=" ‹ السورس › ", url=f"{SUPPORT_CHAT}"
                     )
                 ]
             )
@@ -90,7 +90,7 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
             buttons.append(
                 [
                     InlineKeyboardButton(
-                        text=" ‹ قناة البوت › ", url=f"{SUPPORT_GROUP}"
+                        text=" ‹ قناة البوت › ", url=f"{SUPPORT_CHAT}"
                     )
                 ]
             )
@@ -116,7 +116,7 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
             buttons.append(
                 [
                     InlineKeyboardButton(
-                        text=_["S_B_6"], url=f"{SUPPORT_GROUP}"
+                        text=_["S_B_6"], url=f"{SUPPORT_CHAT}"
                     ),
                 ]
             )
