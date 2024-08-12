@@ -2,7 +2,7 @@
 from YousefMusic import app
 from typing import Union
 from pyrogram.types import InlineKeyboardButton
-from config import SUPPORT_CHANNEL, SUPPORT_CHAT, OWNER_ID
+from config import SUPPORT_CHANNEL, YAFA_CHANNEL, OWNER_ID
 
 
 def start_panel(_):
@@ -18,7 +18,7 @@ def start_panel(_):
             InlineKeyboardButton(text=_["S_B_4"], url=f"{SUPPORT_CHANNEL}"),
         ],
         [
-            InlineKeyboardButton(text=_["S_B_3"], url=f"{SUPPORT_CHAT}"),
+            InlineKeyboardButton(text=_["S_B_3"], url=f"{YAFA_CHANNEL}"),
         ],
         [
             InlineKeyboardButton(
@@ -37,7 +37,7 @@ def private_panel(_, OWNER_ID: Union[bool, int] = None):
         [InlineKeyboardButton(text=_["S_B_8"], callback_data="zzzback")],
         [
             InlineKeyboardButton(text=_["S_B_4"], url=f"{SUPPORT_CHANNEL}"),
-            InlineKeyboardButton(text=_["S_B_3"], url=f"{SUPPORT_CHAT}"),
+            InlineKeyboardButton(text=_["S_B_3"], url=f"{YAFA_CHANNEL}"),
         ],
         [
             InlineKeyboardButton(
@@ -68,7 +68,7 @@ def alive_panel(_):
             InlineKeyboardButton(
                 text="- اضفني .", url=f"https://t.me/{app.username}?startgroup=true"
             ),
-            InlineKeyboardButton(text=_["S_B_3"], url=f"{SUPPORT_CHAT}"),
+            InlineKeyboardButton(text=_["S_B_3"], url=f"{YAFA_CHANNEL}"),
         ],
     ]
     return buttons
