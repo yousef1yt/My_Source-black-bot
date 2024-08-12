@@ -48,9 +48,8 @@ def stream_markup_timer(_, chat_id, played, dur):
             InlineKeyboardButton(text="ايقاف", callback_data=f"ADMIN Pause|{chat_id}"),
             
         ],[
-            InlineKeyboardButton(text=_["chaneel"], url=f"{YAFA_CHANNEL}"),
             
-        ],[
+        ],[ InlineKeyboardButton(text=_["chaneel"], url=f"{YAFA_CHANNEL}"),
             InlineKeyboardButton(text="dev", user_id=OWNER_ID),
         ],[
             InlineKeyboardButton(text="اضف البوت إلى مجموعتك ⚡", url=f"https://t.me/{app.username}?startgroup=true")],
@@ -66,9 +65,8 @@ def stream_markup(_, chat_id):
             InlineKeyboardButton(text="ايقاف", callback_data=f"ADMIN Pause|{chat_id}"),
             
         ],[
-            InlineKeyboardButton(text=_["chaneel"], url=f"{YAFA_CHANNEL}"),
            
-        ],[
+        ],[ InlineKeyboardButton(text=_["chaneel"], url=f"{YAFA_CHANNEL}"),
             InlineKeyboardButton(text="dev", user_id=OWNER_ID),
         ],[
             InlineKeyboardButton(text="اضف البوت إلى مجموعتك ⚡", url=f"https://t.me/{app.username}?startgroup=true")],
