@@ -14,7 +14,7 @@ from YousefMusic.core.call import Zelzaly
 from YousefMusic.misc import db
 from YousefMusic.utils.database import add_active_video_chat, is_active_chat
 from YousefMusic.utils.exceptions import AssistantErr
-from ZelzalMusic.utils.inline import aq_markup, close_markup, stream_markup
+from YousefMusic.utils.inline import aq_markup, close_markup, stream_markup
 from YousefMusic.utils.pastebin import ZelzalyBin
 from YousefMusic.utils.stream.queue import put_queue, put_queue_index
 from YousefMusic.utils.thumbnails import get_thumb
