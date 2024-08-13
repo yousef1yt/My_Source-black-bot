@@ -50,7 +50,7 @@ def stream_markup_timer(_, chat_id, played, dur):
             InlineKeyboardButton(text=config.CHANNEL_NAME, url=config.CHANNEL_LINK),
             
         ],[
-            InlineKeyboardButton(text=" 𝑫𝒆𝒗 ", user_id=config.OWNER_ID),
+            InlineKeyboardButton(text="المطور", user_id=config.OWNER_ID),
         ],[
             InlineKeyboardButton(text="اضف البوت إلى مجموعتك ⚡", url=f"https://t.me/{app.username}?startgroup=true")],
     ]
@@ -68,7 +68,7 @@ def stream_markup(_, chat_id):
             InlineKeyboardButton(text=config.CHANNEL_NAME, url=config.CHANNEL_LINK),
            
         ],[
-            InlineKeyboardButton(text=" 𝑫𝒆𝒗 ", user_id=config.OWNER_ID),
+            InlineKeyboardButton(text="المطور", user_id=config.OWNER_ID),
         ],[
             InlineKeyboardButton(text="اضف البوت إلى مجموعتك ⚡", url=f"https://t.me/{app.username}?startgroup=true")],
     ]
