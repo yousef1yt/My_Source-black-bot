@@ -10,8 +10,8 @@ from typing import Union
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Voice
 
 import config
-from ZelzalMusic import app
-from ZelzalMusic.utils.formatters import (
+from YousefMusic import app
+from YousefMusic.utils.formatters import (
     check_duration,
     convert_bytes,
     get_readable_time,
