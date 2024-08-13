@@ -9,16 +9,16 @@ from typing import Union
 from pyrogram.types import InlineKeyboardMarkup
 
 import config
-from YousefMusic import Carbon, YouTube, YTB, app
+from YousefMusic import Carbon, YouTube, app
 from YousefMusic.core.call import Zelzaly
 from YousefMusic.misc import db
 from YousefMusic.utils.database import add_active_video_chat, is_active_chat
 from YousefMusic.utils.exceptions import AssistantErr
-from YousefMusic.utils.inline import aq_markup, close_markup, stream_markup
+from ZelzalMusic.utils.inline import aq_markup, close_markup, stream_markup
 from YousefMusic.utils.pastebin import ZelzalyBin
 from YousefMusic.utils.stream.queue import put_queue, put_queue_index
 from YousefMusic.utils.thumbnails import get_thumb
-
+import os, requests
 
 async def stream(
     _,
@@ -82,12 +82,7 @@ async def stream(
                         vidid, mystic, video=status, videoid=True
                     )
                 except:
-                    try:
-                        file_path, direct = await YTB.download(
-                            vidid, mystic, video=status, videoid=True
-                        )
-                    except:
-                        raise AssistantErr(_["play_14"])
+                    raise AssistantErr(_["play_14"])
                 await Zelzaly.join_call(
                     chat_id,
                     original_chat_id,
@@ -151,12 +146,7 @@ async def stream(
                 vidid, mystic, videoid=True, video=status
             )
         except:
-            try:
-                file_path, direct = await YTB.download(
-                    vidid, mystic, videoid=True, video=status
-                )
-            except:
-                raise AssistantErr(_["play_14"])
+            raise AssistantErr(_["play_14"])
         if await is_active_chat(chat_id):
             await put_queue(
                 chat_id,
