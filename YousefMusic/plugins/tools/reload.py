@@ -97,7 +97,7 @@ async def close_menu(_, CallbackQuery):
         await CallbackQuery.answer()
         await CallbackQuery.message.delete()
         await CallbackQuery.message.reply_text(
-            f"• تم الاغـلاق بواسطـة : {CallbackQuery.from_user.mention}"
+            
         )
     except:
         pass
