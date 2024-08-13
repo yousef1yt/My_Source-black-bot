@@ -22,7 +22,6 @@ userbot = Userbot()
 from .platforms import *
 
 Apple = AppleAPI()
-Carbon = CarbonAPI()
 SoundCloud = SoundAPI()
 Spotify = SpotifyAPI()
 Telegram = TeleAPI()
