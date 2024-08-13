@@ -25,7 +25,7 @@ def start_panel(_):
             InlineKeyboardButton(text=_["S_B_6"], url=f"https://t.me/y_o_v"),
         ] if OWNER_ID else [],
         [InlineKeyboardButton(text=_["ST_B_6"], callback_data="LG")],
-            ),
+            
         ],
     ]
     return buttons
