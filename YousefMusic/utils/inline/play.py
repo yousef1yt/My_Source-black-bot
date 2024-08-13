@@ -5,7 +5,6 @@ from YousefMusic import app
 from pyrogram.types import InlineKeyboardButton
 
 from YousefMusic.utils.formatters import time_to_seconds
-from config import OWNER_ID
 
 
 def track_markup(_, videoid, user_id, channel, fplay):
@@ -48,9 +47,10 @@ def stream_markup_timer(_, chat_id, played, dur):
             InlineKeyboardButton(text="ايقاف", callback_data=f"ADMIN Pause|{chat_id}"),
             
         ],[
+            InlineKeyboardButton(text="˛ 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 . ", url=f"https://t.me/cecrr"),
             
         ],[
-            InlineKeyboardButton(text=" 𝑫𝒆𝒗 ", user_id=config.OWNER_ID),
+            InlineKeyboardButton(text="𓏺 َ𝗬𝗼𝘂𝘀𝗲𝗳 .", url=f"https://t.me/y_o_v"),
         ],[
             InlineKeyboardButton(text="اضف البوت إلى مجموعتك ⚡", url=f"https://t.me/{app.username}?startgroup=true")],
     ]
@@ -65,9 +65,10 @@ def stream_markup(_, chat_id):
             InlineKeyboardButton(text="ايقاف", callback_data=f"ADMIN Pause|{chat_id}"),
             
         ],[
+            InlineKeyboardButton(text="˛ 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 . ", url=f"https://t.me/cecrr"),
            
         ],[
-            InlineKeyboardButton(text=" 𝑫𝒆𝒗 ", user_id=config.OWNER_ID),
+            InlineKeyboardButton(text="𓏺 َ𝗬𝗼𝘂𝘀𝗲𝗳 .", url=f"https://t.me/y_o_v"),
         ],[
             InlineKeyboardButton(text="اضف البوت إلى مجموعتك ⚡", url=f"https://t.me/{app.username}?startgroup=true")],
     ]
