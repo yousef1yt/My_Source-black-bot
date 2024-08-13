@@ -1,6 +1,6 @@
 from pyrogram.types import InlineKeyboardButton
 
-import config
+import config YAFA_CHANNEL,OWNER_CHANNEL,OWNER_ID,SUPPORT_CHAT
 from YousefMusic import app
 
 
