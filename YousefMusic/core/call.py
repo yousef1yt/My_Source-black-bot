@@ -21,7 +21,7 @@ from pytgcalls.types.input_stream.quality import HighQualityAudio, MediumQuality
 from pytgcalls.types.stream import StreamAudioEnded
 
 import config
-from YousefMusic import LOGGER, YouTube, app, YTB
+from YousefMusic import LOGGER, YouTube, app
 from YousefMusic.misc import db
 from YousefMusic.utils.database import (
     add_active_chat,
@@ -41,6 +41,8 @@ from YousefMusic.utils.inline.play import stream_markup
 from YousefMusic.utils.stream.autoclear import auto_clean
 from YousefMusic.utils.thumbnails import get_thumb
 from strings import get_string
+import os, requests
+
 
 autoend = {}
 counter = {}
@@ -420,17 +422,9 @@ class Call(PyTgCalls):
                         video=True if str(streamtype) == "video" else False,
                     )
                 except:
-                    try:
-                        file_path, direct = await YTB.download(
-                            videoid,
-                            mystic,
-                            videoid=True,
-                            video=True if str(streamtype) == "video" else False,
-                        )
-                    except:
-                        return await mystic.edit_text(
-                            _["call_6"], disable_web_page_preview=True
-                        )
+                    return await mystic.edit_text(
+                        _["call_6"], disable_web_page_preview=True
+                    )
                 if video:
                     stream = AudioVideoPiped(
                         file_path,
@@ -568,7 +562,7 @@ class Call(PyTgCalls):
         return str(round(sum(pings) / len(pings), 3))
 
     async def start(self):
-        LOGGER("ميــوزك اكس").info("جارِ تحميل مكاتب الميوزك . . .\n")
+        LOGGER("ميــوزك زدثــون").info("جارِ تحميل مكاتب الميوزك . . .\n")
         if config.STRING1:
             await self.one.start()
         if config.STRING2:
