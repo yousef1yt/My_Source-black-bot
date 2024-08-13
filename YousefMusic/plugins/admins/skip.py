@@ -7,7 +7,7 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, Message
 
 import config
-from YousefMusic import YouTube, app, YTB
+from YousefMusic import YouTube, app
 from YousefMusic.core.call import Zelzaly
 from YousefMusic.misc import db
 from YousefMusic.utils.database import get_loop
@@ -19,7 +19,7 @@ from config import BANNED_USERS
 
 
 @app.on_message(
-    command(["/skip", "تخطي", "/next", "التالي"]) & ~BANNED_USERS
+    command(["/skip", "تخطي", "/next", "سكب"]) & ~BANNED_USERS
 )
 @AdminRightsCheck
 async def skip(cli, message: Message, _, chat_id):
@@ -146,15 +146,7 @@ async def skip(cli, message: Message, _, chat_id):
                 video=status,
             )
         except:
-            try:
-                file_path, direct = await YTB.download(
-                    videoid,
-                    mystic,
-                    videoid=True,
-                    video=status,
-                )
-            except:
-                return await mystic.edit_text(_["call_6"])
+            return await mystic.edit_text(_["call_6"])
         try:
             image = await YouTube.thumbnail(videoid, True)
         except:
