@@ -1,8 +1,7 @@
-from pyrogram.types import InlineKeyboardButton
-
-import config 
-from config import YAFA_CHANNEL, SUPPORT_CHAT, OWNER_ID, OWNER_CHANNEL
 from YousefMusic import app
+from typing import Union
+from pyrogram.types import InlineKeyboardButton
+from config import YAFA_CHANNEL, SUPPORT_CHAT, OWNER_ID, OWNER_CHANNEL
 
 
 def start_panel(_):
