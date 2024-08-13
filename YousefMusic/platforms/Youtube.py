@@ -1,11 +1,11 @@
-#▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒✯ ʑᴇʟᴢᴀʟ_ᴍᴜsɪᴄ ✯▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-#▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒✯  T.me/ZThon   ✯▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-#▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒✯ T.me/Zelzal_Music ✯▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-
 import asyncio
+
 import aiohttp
+
 import requests
+
 import config
+
 import os
 import re
 from typing import Union
@@ -15,8 +15,8 @@ from pyrogram.enums import MessageEntityType
 from pyrogram.types import Message
 from youtubesearchpython.__future__ import VideosSearch
 
-from YousefMusic.utils.database import is_on_off
-from YousefMusic.utils.formatters import time_to_seconds
+from ZeMusic.utils.database import is_on_off
+from ZeMusic.utils.formatters import time_to_seconds
 
 
 async def shell_cmd(cmd):
@@ -253,7 +253,7 @@ class YouTubeAPI:
                 "outtmpl": "downloads/%(id)s.%(ext)s",
                 "quiet": True,
                 "no_warnings": True,
-                "proxy": "8.223.31.16:80"
+                "proxy": "200.174.198.86:8888"
             }
             x = yt_dlp.YoutubeDL(ydl_optssx)
             info = x.extract_info(link, False)
@@ -262,7 +262,6 @@ class YouTubeAPI:
                 return xyz
             x.download([link])
             return xyz
-            }
             x = yt_dlp.YoutubeDL(ydl_optssx)
             info = x.extract_info(link, False)
             xyz = os.path.join("downloads", f"{info['id']}.{info['ext']}")
@@ -334,7 +333,7 @@ class YouTubeAPI:
             fpath = f"downloads/{title}.mp3"
             return fpath
         elif video:
-            if await is_on_off(config.YTDOWNLOADER):
+            if await is_on_off(1):
                 direct = True
                 downloaded_file = await loop.run_in_executor(None, video_dl)
             else:
