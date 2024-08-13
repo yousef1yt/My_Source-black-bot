@@ -2,7 +2,6 @@ import os, asyncio
 from typing import Optional
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery
-from telegraph import upload_file
 from YousefMusic import app
 
 #---------------FUNCTION---------------#
