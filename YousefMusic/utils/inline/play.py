@@ -47,7 +47,7 @@ def stream_markup_timer(_, chat_id, played, dur):
             InlineKeyboardButton(text="ايقاف", callback_data=f"ADMIN Pause|{chat_id}"),
             
         ],[
-            InlineKeyboardButton(text=config.CHANNEL_NAME, url=config.CHANNEL_LINK),
+            InlineKeyboardButton(text=config.CHANNEL_NAME, url=config.YAFA_CHANNEL),
             
         ],[
             InlineKeyboardButton(text="المطور", user_id=config.OWNER_ID),
@@ -65,7 +65,7 @@ def stream_markup(_, chat_id):
             InlineKeyboardButton(text="ايقاف", callback_data=f"ADMIN Pause|{chat_id}"),
             
         ],[
-            InlineKeyboardButton(text=config.CHANNEL_NAME, url=config.CHANNEL_LINK),
+            InlineKeyboardButton(text=config.CHANNEL_NAME, url=config.YAFA_CHANNEL),
            
         ],[
             InlineKeyboardButton(text="المطور", user_id=config.OWNER_ID),
