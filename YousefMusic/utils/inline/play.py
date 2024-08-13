@@ -47,7 +47,7 @@ def stream_markup_timer(_, chat_id, played, dur):
             InlineKeyboardButton(text="ايقاف", callback_data=f"ADMIN Pause|{chat_id}"),
             
         ],[
-            InlineKeyboardButton(text="˛ 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 . ", url=f"https://t.me/cecrr"),
+            InlineKeyboardButton(text=" 𝗖𝗛𝗔𝗡𝗡𝗘𝗟  ", url=f"https://t.me/cecrr"),
             
         ],[
             InlineKeyboardButton(text="𓏺 َ𝗬𝗼𝘂𝘀𝗲𝗳 .", url=f"https://t.me/y_o_v"),
@@ -65,7 +65,7 @@ def stream_markup(_, chat_id):
             InlineKeyboardButton(text="ايقاف", callback_data=f"ADMIN Pause|{chat_id}"),
             
         ],[
-            InlineKeyboardButton(text="˛ 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 . ", url=f"https://t.me/cecrr"),
+            InlineKeyboardButton(text=" 𝗖𝗛𝗔𝗡𝗡𝗘𝗟  ", url=f"https://t.me/cecrr"),
            
         ],[
             InlineKeyboardButton(text="𓏺 َ𝗬𝗼𝘂𝘀𝗲𝗳 .", url=f"https://t.me/y_o_v"),
