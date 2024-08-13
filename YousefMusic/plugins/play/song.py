@@ -7,7 +7,7 @@ import logging
 from pyrogram import filters
 from strings.filters import command
 from youtube_search import YoutubeSearch
-from ZelzalMusic import app
+from YousefMusic import app
 
 def get_cookies_file():
     folder_path = f"{os.getcwd()}/cookies"
