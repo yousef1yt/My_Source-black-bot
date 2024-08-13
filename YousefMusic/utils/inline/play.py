@@ -48,7 +48,6 @@ def stream_markup_timer(_, chat_id, played, dur):
             InlineKeyboardButton(text="ايقاف", callback_data=f"ADMIN Pause|{chat_id}"),
             
         ],[
-            InlineKeyboardButton(text="𝐂𝐇𝐀𝐍𝐍𝐄𝐋 ", url=f"https://t.me/cecrr"),
             
         ],[
             InlineKeyboardButton(text=" 𝑫𝒆𝒗 ", user_id=config.OWNER_ID),
@@ -66,7 +65,6 @@ def stream_markup(_, chat_id):
             InlineKeyboardButton(text="ايقاف", callback_data=f"ADMIN Pause|{chat_id}"),
             
         ],[
-            InlineKeyboardButton(text="𝐂𝐇𝐀𝐍𝐍𝐄𝐋 ", url=f"https://t.me/cecrr"),
            
         ],[
             InlineKeyboardButton(text=" 𝑫𝒆𝒗 ", user_id=config.OWNER_ID),
