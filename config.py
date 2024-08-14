@@ -54,7 +54,7 @@ SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/cecrr")
 CHANNEL_NAME = getenv("CHANNEL_NAME", "• . 𝖠 ' 𝟣𝟣𝟣 . •")
 CHANNEL_LINK = getenv("CHANNEL_LINK", "cecrr")
 
-OWNER_CHANNEL = getenv("OWNER_CHANNEL", "https://t.me/cecrr")
+OWNER_CHANNEL = getenv("OWNER_CHANNEL", "https://t.me/y_o_v")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = safe_getenv_bool("AUTO_LEAVING_ASSISTANT", False)
