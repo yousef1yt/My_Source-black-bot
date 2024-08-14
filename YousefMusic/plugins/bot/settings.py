@@ -1,7 +1,3 @@
-#▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒✯ ʑᴇʟᴢᴀʟ_ᴍᴜsɪᴄ ✯▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-#▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒✯  T.me/ZThon   ✯▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-#▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒✯ T.me/Zelzal_Music ✯▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-
 from pyrogram import filters
 from pyrogram.enums import ChatType
 from pyrogram.errors import MessageNotModified
@@ -51,7 +47,13 @@ async def settings_mar(client, message: Message, _):
         _["setting_1"].format(app.mention, message.chat.id, message.chat.title),
         reply_markup=InlineKeyboardMarkup(buttons),
     )
-
+@app.on_callback_query(filters.regex("commands_bot") & ~BANNED_USERS)
+async def command_bot(c,cq):
+    if cq.message.chat.type == ChatType.PRIVATE:
+        return await cq.edit_message_text(
+            "<b>• اوامر التشغـيل◟\n• شغل او تشغيل ، لـ تشغـيل الموسيقي◟  \n• فيد او فيديو  ، لـ تشغـيل مقطع فيديو◟ \n• يوت + اسم الفيديو ، لـ تحميل مقطع فيديو◟\n• تنزيل + اسم الاغنية ، لـ تحميل ملف صوتي◟\n• سورس ، لعرض معلومات البوت◟\n\n• مطور السورس : @y_o_v</b>",
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="رجوع",callback_data=f"settingsback_helper",)],]),
+        )
 
 @app.on_callback_query(filters.regex("settings_helper") & ~BANNED_USERS)
 @languageCB
