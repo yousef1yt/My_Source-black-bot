@@ -70,7 +70,7 @@ def queue_back_markup(_, CPLAY):
 
 
 def aq_markup(_, chat_id):
-    chat_tit = "Not ᥉ꪮ᥉."
+    chat_tit = ". 𝖠 ' 𝟣𝟣𝟣 ."
     buttons = [
         [InlineKeyboardButton(text=chat_tit, url=f"https://t.me/{CH_US}")],
     ]
