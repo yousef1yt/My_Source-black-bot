@@ -26,11 +26,11 @@ def private_panel(_):
         ],
         [InlineKeyboardButton(text=_["S_B_8"], callback_data="commands_bot")],
         [
-            InlineKeyboardButton(text=_["S_B_7"], user_id=config.OWNER_ID),
+            InlineKeyboardButton(text=_["S_B_3"], url=config.YAFA_CHANNEL),
             InlineKeyboardButton(text=_["S_B_4"], url=config.SUPPORT_CHANNEL),
         ],
         [
-            InlineKeyboardButton(text=_["S_B_3"], url=config.YAFA_CHANNEL),
+            InlineKeyboardButton(text=_["S_B_7"], user_id=config.OWNER_ID),
             
         ],
     ]
