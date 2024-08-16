@@ -90,7 +90,7 @@ async def rsexs(client, message):
                         name, url=f"https://t.me/{usr.username}"),
                   ],[
                     InlineKeyboardButton(
-                        "• استدعاء المطور •", callback_data="devatari"),
+                        "• استدعاء مطور السورس •", callback_data="devatari"),
                     
                 ],
             ]
