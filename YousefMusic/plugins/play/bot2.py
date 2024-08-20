@@ -35,11 +35,11 @@ async def Mazen_bot(client, message):
     bot_username = (await app.get_me()).username
     bar = random.choice(Mazen_responses).format(name=name)
     keyboard = InlineKeyboardMarkup([
-        [InlineKeyboardButton("تحديثات بلاك ⚡", url=f"https://t.me/P_6_B")]
+        [InlineKeyboardButton("تحديثات بلاك ⚡", url=f"https://t.me/cecrr")]
     ])
     
     await message.reply_text(
-        text=f"**[{bar}](https://t.me/P_6_B)**",
+        text=f"**[{bar}](https://t.me/cecrr)**",
         disable_web_page_preview=True,
         reply_markup=keyboard,
     parse_mode=enums.ParseMode.MARKDOWN)
