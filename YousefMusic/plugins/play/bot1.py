@@ -38,7 +38,6 @@ async def Mazen_bot(client, message):
     bot_username = (await app.get_me()).username
     bar = random.choice(Mazen_responses).format(name=name)
     keyboard = InlineKeyboardMarkup([
-        [InlineKeyboardButton("تحديثات البوت ⚡", url=f"https://t.me/cecrr")]
     ])
     
     await message.reply_text(
