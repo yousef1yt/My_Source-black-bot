@@ -48,7 +48,7 @@ def start(client, message):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [InlineKeyboardButton("اضغط للعب", callback_data="join")],
-                    [InlineKeyboardButton("‹ 𝖲𝗈𝗎𝗋𝖼𝖾 𝖤𝗂𝗋𝗍𝗁𝗈𝗇 ›", url="https://t.me/eirthon")]
+                    [InlineKeyboardButton("‹ . 𝖠 ' 𝟣𝟣𝟣 . ›", url="https://t.me/cecrr")]
                 ]
             )
         )
@@ -67,7 +67,7 @@ def join(client, callback_query):
                         [InlineKeyboardButton("حجرة", callback_data="حجرة"),
                          InlineKeyboardButton("ورقة", callback_data="ورقة"),
                          InlineKeyboardButton("مقص", callback_data="مقص")],[
-                         InlineKeyboardButton("‹ 𝖲𝗈𝗎𝗋𝖼𝖾 𝖤𝗂𝗋𝗍𝗁𝗈𝗇 ›", url="https://t.me/eirthon")
+                         InlineKeyboardButton("‹ . 𝖠 ' 𝟣𝟣𝟣 . ›", url="https://t.me/cecrr")
                          ]
                     ]
                 )
@@ -94,7 +94,7 @@ def choose(client, callback_query):
                         [InlineKeyboardButton("حجرة", callback_data="حجرة"),
                          InlineKeyboardButton("ورقة", callback_data="ورقة"),
                          InlineKeyboardButton("مقص", callback_data="مقص")],
-                         [InlineKeyboardButton("‹ 𝖲𝗈𝗎𝗋𝖼𝖾 𝖤𝗂𝗋𝗍𝗁𝗈𝗇 ›", url="https://t.me/eirthon")]
+                         [InlineKeyboardButton("‹ . 𝖠 ' 𝟣𝟣𝟣 . ›", url="https://t.me/cecrr")]
                     ]
                 )
             )
