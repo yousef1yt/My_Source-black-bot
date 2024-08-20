@@ -1,5 +1,7 @@
 import math
 
+import config
+
 from YousefMusic import app 
 
 from pyrogram.types import InlineKeyboardButton
@@ -51,7 +53,7 @@ def stream_markup_timer(_, chat_id, played, dur):
             InlineKeyboardButton(text="ᏟᎻᎪΝΝᎬᏞ²", url=f"https://t.me/P_6_B"),
             
         ],[
-            InlineKeyboardButton(text="𓏺 َ𝗬𝗼𝘂𝘀𝗲𝗳 .", url=f"https://t.me/y_o_v"),
+            InlineKeyboardButton(text=_["S_B_7"], user_id=config.OWNER_ID),
         ],[
             InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
@@ -70,7 +72,7 @@ def stream_markup(_, chat_id):
             InlineKeyboardButton(text="ᏟᎻᎪΝΝᎬᏞ²", url=f"https://t.me/P_6_B"),
            
         ],[
-            InlineKeyboardButton(text="𓏺 َ𝗬𝗼𝘂𝘀𝗲𝗳 .", url=f"https://t.me/y_o_v"),
+            InlineKeyboardButton(text=_["S_B_7"], user_id=config.OWNER_ID),
         ],[
             InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
