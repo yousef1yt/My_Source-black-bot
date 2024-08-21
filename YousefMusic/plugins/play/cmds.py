@@ -17,7 +17,7 @@ from pyrogram.errors import MessageNotModified
 
 @app.on_message(
     command(["• الاوامر •", "الميوزك", "الاوامر"]))
-)
+
 async def سبارك_source(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://graph.org/file/2577f47589c4b4c63e4a6.jpg",
