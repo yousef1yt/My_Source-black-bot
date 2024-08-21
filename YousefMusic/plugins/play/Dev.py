@@ -79,7 +79,7 @@ OWNER = getenv("OWNER")
 
 
 
-@app.on_message(filters.command(["مبرمج السورس", "فطومه","فطوم"], ""))
+@app.on_message(filters.command(["مبرمج السورس", "• مبرمج السورس •", "فطومه","فطوم"], ""))
 async def dev(client: Client, message: Message):
      bot_username = client.me.username
      user = await client.get_chat(6763556715)
@@ -118,7 +118,7 @@ OWNER = getenv("OWNER")
 
 
 
-@app.on_message(filters.command(["المطور", "مطور البوت"], ""))
+@app.on_message(filters.command(["المطور", "• مطور البوت •"], ""))
 async def dev(client: Client, message: Message):
      bot_username = client.me.username
      user = await client.get_chat(OWNER_ID)
