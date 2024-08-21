@@ -70,8 +70,7 @@ txt = [
         
 
 
-@app.on_message(command(["صراحه"]))
-
+@app.on_message(filters.command(["صراحه","ص"], ""))
 async def sraha(client: Client, message: Message):
 
       a = random.choice(txt)
