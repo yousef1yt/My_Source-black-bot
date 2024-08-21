@@ -30,7 +30,7 @@ async def nummmm(client: app, message):
   if not chek.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR]:
     await message.reply("♪ عذرا عزيزي هذا الامر لأدمن الجروب فقط   .")
     return
-  await message.reply_text("♪ جاري بدأ المنشن ، لايقاف الامر اضغط /cancel   .")
+  await message.reply_text("♪ جاري بدأ التاك ، لايقاف الامر اضغط /cancel   .")
   i = 0
   txt = ""
   zz = message.text
@@ -75,7 +75,7 @@ async def stop(client, message):
     await message.reply("♪ عذرا عزيزي هذا الامر للادمن الجروب فقط   .")
     return
   if message.chat.id not in array:
-     await message.reply("♪ المنشن متوقف بالفعل   .")
+     await message.reply("♪ تاك متوقف بالفعل   .")
      return 
   if message.chat.id in array:
     array.remove(message.chat.id)
