@@ -21,15 +21,15 @@ async def pin(_, message):
     name = message.from_user.mention
     
     if message.chat.type == enums.ChatType.PRIVATE:
-        await message.reply_text("**↢ هذا مو كروب يا حلو**")
+        await message.reply_text("↢ هذا مو كروب يا حلو")
     elif not replied:
-        await message.reply_text("**⋙ رد على الرسالـة علمود تكدر تثبتها !**")
+        await message.reply_text("⋙ رد على الرسالـة علمود تكدر تثبتها !")
     else:
         user_stats = await app.get_chat_member(chat_id, user_id)
         if user_stats.privileges.can_pin_messages and message.reply_to_message:
             try:
                 await message.reply_to_message.pin()
-                await message.reply_text(f"**⋙ أبشر ثبتت الرسالـة **\n\n**المجموعـة:** {chat_title}\n**المُشرف:** {name}", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(" 📝 ᴠɪᴇᴡs ᴍᴇssᴀɢᴇ ", url=replied.link)]]))
+                await message.reply_text(f"⋙ أبشر ثبتت الرسالـة \n\nالمجموعـة: {chat_title}\nالمُشرف: {name}", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(" رؤيه الرساله ", url=replied.link)]]))
             except Exception as e:
                 await message.reply_text(str(e))
 
@@ -38,7 +38,7 @@ async def pin(_, message):
 async def pinned(_, message):
     chat = await app.get_chat(message.chat.id)
     if not chat.pinned_message:
-        return await message.reply_text("**↢ ما بيه رسائل مثبتة.**")
+        return await message.reply_text("↢ ما بيه رسائل مثبتة.")
     try:        
         await message.reply_text("هُنا آخر الرسائل المثبتة",reply_markup=
         InlineKeyboardMarkup([[InlineKeyboardButton(text="↢عرض الرسالة",url=chat.pinned_message.link)]]))  
@@ -57,15 +57,15 @@ async def unpin(_, message):
     name = message.from_user.mention
     
     if message.chat.type == enums.ChatType.PRIVATE:
-        await message.reply_text("**↢هذا مو كروب يا حلو !**")
+        await message.reply_text("↢هذا مو كروب يا حلو !")
     elif not replied:
-        await message.reply_text("**↢ رُد على الرسالـة علمود تكدر تلغي تثبيتـهــا!**")
+        await message.reply_text("↢ رُد على الرسالـة علمود تكدر تلغي تثبيتـهــا!")
     else:
         user_stats = await app.get_chat_member(chat_id, user_id)
         if user_stats.privileges.can_pin_messages and message.reply_to_message:
             try:
                 await message.reply_to_message.unpin()
-                await message.reply_text(f"**↢تم إلغاء تثبيت الرسالة بنجاح**\n\n**المجموعـة:** {chat_title}\n**المُشرف:** {name}", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(" 📝 ᴠɪᴇᴡs ᴍᴇssᴀɢᴇ ", url=replied.link)]]))
+                await message.reply_text(f"↢تم إلغاء تثبيت الرسالة بنجاح\n\nالمجموعـة: {chat_title}\nالمُشرف: {name}", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(" رؤيه الرساله ", url=replied.link)]]))
             except Exception as e:
                 await message.reply_text(str(e))
 
@@ -79,16 +79,16 @@ async def deletechatphoto(_, message):
       
       chat_id = message.chat.id
       user_id = message.from_user.id
-      msg = await message.reply_text("**جاري المسـح....**")
+      msg = await message.reply_text("جاري المسـح....")
       admin_check = await app.get_chat_member(chat_id, user_id)
       if message.chat.type == enums.ChatType.PRIVATE:
-           await msg.edit("**ما تكدر تستخدم هالأمر إلّا بالمجموعات !**") 
+           await msg.edit("ما تكدر تستخدم هالأمر إلّا بالمجموعات !") 
       try:
          if admin_check.privileges.can_change_info:
              await app.delete_chat_photo(chat_id)
-             await msg.edit("**↢أبشـر مسحـت صورة المجموعة !\nمن 🕊️** {}".format(message.from_user.mention))    
+             await msg.edit("↢أبشـر مسحـت صورة المجموعة !\nمن 🕊️ {}".format(message.from_user.mention))    
       except:
-          await msg.edit("**↢ما عندي صلاحية ( تعديل معلومات المجموعة ) علمود كذا ما يمديني أحذف الصورة، آسف .**")
+          await msg.edit("↢ما عندي صلاحية ( تعديل معلومات المجموعة ) علمود كذا ما يمديني أحذف الصورة، آسف .")
 
 
 # --------------------------------------------------------------------------------- #
@@ -103,18 +103,18 @@ async def setchatphoto(_, message):
       if message.chat.type == enums.ChatType.PRIVATE:
            await msg.edit("`ما يمديك تستخدم هالأمر إلّا بالمجموعات !`") 
       elif not reply:
-           await msg.edit("**↢بالرد على صورة معينة.**")
+           await msg.edit("↢بالرد على صورة معينة.")
       elif reply:
           try:
              if admin_check.privileges.can_change_info:
                 photo = await reply.download()
                 await message.chat.set_photo(photo=photo)
-                await msg.edit_text("**↢ أبشر غيرت صورة المجموعة\nمن 🕊️** {}".format(message.from_user.mention))
+                await msg.edit_text("↢ أبشر غيرت صورة المجموعة\nمن 🕊️ {}".format(message.from_user.mention))
              else:
-                await msg.edit("**↢خطـأ، جرب صورة ثانية.**")
+                await msg.edit("↢خطـأ، جرب صورة ثانية.")
      
           except:
-              await msg.edit("**↢ ما عندي صلاحية ( تغيير معلومات المجموعة ) عشان كذا ما أقدر أحط صورة للمجموعة، آسف**")
+              await msg.edit("↢ ما عندي صلاحية ( تغيير معلومات المجموعة ) عشان كذا ما أقدر أحط صورة للمجموعة، آسف")
 
 
 # --------------------------------------------------------------------------------- #
@@ -190,7 +190,7 @@ async def setg_discription(_, message):
 @app.on_message(filters.command("غادر", [".", ""])& filters.user(OWNER_ID))
 async def bot_leave(_, message):
     chat_id = message.chat.id
-    text = "**↢أنا مغادر، سلام 🚶....**"
+    text = "↢أنا مغادر، سلام 🚶...."
     await message.reply_text(text)
     await app.leave_chat(chat_id=chat_id, delete=True)
 
