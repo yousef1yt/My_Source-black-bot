@@ -1,98 +1,146 @@
 import asyncio
+
+
+import asyncio
+import aiohttp
+from pyrogram.enums import ChatMembersFilter
+from pyrogram.enums import ChatMemberStatus
+from pyrogram import enums
+import config
+
 import os
 import time
 import requests
+from config import START_IMG_URL
 from pyrogram import filters
 import random
 from pyrogram import Client
-from YousefMusic.utils.decorators import AdminActual
-from pyrogram.types import (
-    CallbackQuery,
-    InlineKeyboardButton,
-    InlineKeyboardMarkup,
-    ReplyKeyboardMarkup,
-    ReplyKeyboardRemove,
-    InputMediaPhoto,
-    Message,
-)
-from strings.filters import command
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from random import  choice, randint
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
+from YousefMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 from YousefMusic import app
-from pyrogram import Client, filters
-from config import OWNER_ID
+from random import  choice, randint
 
-def get_file_id(msg: Message):
-    if msg.media:
-        for message_type in (
-            "photo",
-            "animation",
-            "audio",
-            "document",
-            "video",
-            "video_note",
-            "voice",
-            # "contact",
-            # "dice",
-            # "poll",
-            # "location",
-            # "venue",
-            "sticker",
-        ):
-            obj = getattr(msg, message_type)
-            if obj:
-                setattr(obj, "message_type", message_type)
-                return obj
+from pyrogram.types import ChatMemberUpdated, InlineKeyboardMarkup, InlineKeyboardButton
 
 
-@app.on_callback_query(filters.regex("devatari"))
-async def devatari(_, query: CallbackQuery):
-
-    
-    usm = await app.get_users(user_ids=[OWNER_ID])
-    mname = "usm.first_name"
-    musrnam = "usm.username"
 
 
-    chat = query.message.chat.id
-    gti = query.message.chat.title
-    chatusername = f"@{query.message.chat.username}"
-    chatprivatename = await app.export_chat_invite_link(chat)
-    user_id = query.from_user.id
-    user_ab = query.from_user.username
-    user_name = query.from_user.first_name
-    
-    await app.send_message(OWNER_ID, f"<b>≭︰قام ~ ⦗ {query.from_user.mention} ⦘ .\n</b>"
-                                     f"<b>≭︰بمناداتك عزيزي المطور .\n</b>"
-                                     f"<b>≭︰الأيدي ~ ⦗ {user_id} ⦘ .\n</b>"
-                                     f"<b>≭︰اليوزر ~ ⦗ @{user_ab} ⦘ .\n</b>"
-                                     f"<b>≭︰يوزر المجموعة العام ~ ⦗ {chatusername} ⦘ .\n</b>"
-                                     f"<b>≭︰يوزر المجموعة الخاص ~ ⦗ {chatprivatename} ⦘ .\n</b>"
-                                     f"<b>≭︰ايدي المجموعة ~ ⦗ {chat} ⦘ .\n</b>")
+
+import re
+import sys
+from os import getenv
+
+from dotenv import load_dotenv
+
+load_dotenv()
+
+OWNER_ID = 6094238403
+OWNER = getenv("OWNER")
 
 
-    await query.message.reply_text(f"<b>≭︰تم إرسال استدعائك إلى مطور البوت .\n\n≭︰Berlin Team ~ ⦗ @F_U_O ⦘ .\n≭︰Black Updates ~ ⦗ @cecrr ⦘ .\n≭︰Dev ~ ⦗ @Y_o_v ⦘ .</b>")
 
-@app.on_message(
-    command(["المطور"])
-    & filters.group
-  
-)
-async def rsexs(client, message):
-    usr = await app.get_chat("y_o_v")
-    name = usr.first_name
-    photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"≭︰Dev Name↬⦗{name}⦘\n≭︰Dev User ↬ ⦗ @{usr.username} ⦘\n≭︰Dev id ↬ ⦗ {usr.id} ⦘",  
-    reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        name, url=f"https://t.me/{usr.username}"),
-                  ],[
-                    InlineKeyboardButton(
-                        "• استدعاء مطور السورس •", callback_data="devatari"),
-                    
-                ],
-            ]
-        ),
-                             )
+@app.on_message(filters.command(["مطور السورس", "جو","يوسف"], ""))
+async def dev(client: Client, message: Message):
+     bot_username = client.me.username
+     user = await client.get_chat(6094238403)
+     name = user.first_name
+     username = user.username 
+     bio = user.bio
+     user_id = user.id
+     photo = user.photo.big_file_id
+     photo = await client.download_media(photo)
+     link = f"https://t.me/{message.chat.username}"
+     title = message.chat.title if message.chat.title else message.chat.first_name
+     chat_title = f"𓏺 𝖭𝖺𝗆𝖾 : {message.from_user.mention} \n 𓏺 𝖭𝖺𝗆𝖾 : {title}" if message.from_user else f"𝗂𝖣 : {message.chat.title}"
+     try:
+      await client.send_message(username, f"<b></b>\n حـد بينـادي عليك\n{chat_title}\nايدي الجروب : {message.chat.id}",
+      reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"{title}", url=f"{link}")]]))
+     except:
+        pass
+     await message.reply_photo(
+     photo=photo,
+     caption=f"<b>Developer Name : {name}</b>\n<b>Devloper Username :  @{username}</b>\n<b>- {bio}</b>",
+     reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"{name}", user_id=f"{user_id}")]]))
+     try:
+       os.remove(photo)
+     except:
+        pass
+import re
+import sys
+from os import getenv
+
+from dotenv import load_dotenv
+
+load_dotenv()
+
+
+OWNER_ID = 6717529449
+OWNER = getenv("OWNER")
+
+
+
+@app.on_message(filters.command(["فاطمه", "فطومه","فطوم"], ""))
+async def dev(client: Client, message: Message):
+     bot_username = client.me.username
+     user = await client.get_chat(6763556715)
+     name = user.first_name
+     username = user.username 
+     bio = user.bio
+     user_id = user.id
+     photo = user.photo.big_file_id
+     photo = await client.download_media(photo)
+     link = f"https://t.me/{message.chat.username}"
+     title = message.chat.title if message.chat.title else message.chat.first_name
+     chat_title = f"𓏺 𝖭𝖺𝗆𝖾 : {message.from_user.mention} \n 𓏺 𝖭𝖺𝗆𝖾 : {title}" if message.from_user else f"𝗂𝖣 : {message.chat.title}"
+     try:
+      await client.send_message(username, f"<b></b>\n حـد بينـادي عليك\n{chat_title}\nايدي الجروب : {message.chat.id}",
+      reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"{title}", url=f"{link}")]]))
+     except:
+        pass
+     await message.reply_photo(
+     photo=photo,
+     caption=f"<b>• معلومات قلب رجب</b>\n\n<b>• 𝖭𝖺𝗆𝖾 : {name}</b>\n<b>• 𝖴𝗌𝖾 : @{username}</b>\n<b>• 𝖡𝗂𝗈 : {bio}</b>",
+     reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"{name}", user_id=f"{user_id}")]]))
+     try:
+       os.remove(photo)
+     except:
+        pass
+import re
+import sys
+from os import getenv
+
+from dotenv import load_dotenv
+
+load_dotenv()
+
+OWNER_ID = getenv("OWNER_ID")
+OWNER = getenv("OWNER")
+
+
+
+@app.on_message(filters.command(["المطور", "مطور البوت"], ""))
+async def dev(client: Client, message: Message):
+     bot_username = client.me.username
+     user = await client.get_chat(OWNER_ID)
+     name = user.first_name
+     username = user.username 
+     bio = user.bio
+     user_id = user.id
+     photo = user.photo.big_file_id
+     photo = await client.download_media(photo)
+     link = f"https://t.me/{message.chat.username}"
+     title = message.chat.title if message.chat.title else message.chat.first_name
+     chat_title = f"Developer Name : {message.from_user.mention} \nDevloper Username : {title}" if message.from_user else f"𝗂𝖣 : {message.chat.title}"
+     try:
+      await client.send_message(username, f"<b></b>\n حـد بينـادي عليك\n{chat_title}\nايدي الجروب : {message.chat.id}",
+      reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"{title}", url=f"{link}")]]))
+     except:
+        pass
+     await message.reply_photo(
+     photo=photo,
+     caption=f"<b>• مطور البوت ◟</b>\n\n<b>• 𝖭𝖺𝗆𝖾 : {name}</b>\n<b>• 𝖴𝗌𝖾 : @{username}</b>\n<b>• 𝖡𝗂𝗈 : {bio}</b>",
+     reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"{name}", user_id=f"{user_id}")]]))
+     try:
+       os.remove(photo)
+     except:
+        pass
