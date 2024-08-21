@@ -29,7 +29,7 @@ async def zdatsr(client: Client, message: Message):
                         "• اوامــر التشغيــل •", callback_data="zzzll"),
                 ],[
                     InlineKeyboardButton(
-                        "• اوامـر القنـاة •", callback_data="zzzch"),
+                        "• اوامـر الجروبات •", callback_data="zzzch"),
                     InlineKeyboardButton(
                         "• اوامـر الادمـن •", callback_data="zzzad"),
                 ],[
