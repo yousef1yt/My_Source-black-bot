@@ -20,7 +20,7 @@ from pyrogram.errors import MessageNotModified
 
 async def سبارك_source(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://graph.org/file/2577f47589c4b4c63e4a6.jpg",
+        photo=f"https://te.legra.ph/file/248700971ed421a3dc2db.jpg",
         caption=f"""*⩹━★⊷━⌞ ˛ 𝗦𝗼𝘂𝗿𝗰𝗲 𝗕𝗹𝗮𝗰𝗸 .\nمرحبا بك عزيزي {message.from_user.mention}\nهذا قسم الاوامر الخاص بسورس سبارك \nلمعرفة الاوامر اضغط على الأزرار بالأسفل👇\n**⩹━★⊷━⌞˛ 𝗦𝗼𝘂𝗿𝗰𝗲 𝗕𝗹𝗮𝗰𝗸 .""",
         reply_markup=InlineKeyboardMarkup(
             [
@@ -183,7 +183,7 @@ async def سبارك_usage(_, callback_query: CallbackQuery):
 @app.on_callback_query(filters.regex("back"))
 async def سبارك_back(_, callback_query: CallbackQuery):
     await message.reply_photo(
-        photo=f"https://graph.org/file/2577f47589c4b4c63e4a6.jpg",
+        photo=f"https://te.legra.ph/file/248700971ed421a3dc2db.jpg",
         caption=f"""˛ 𝗦𝗼𝘂𝗿𝗰𝗲 𝗕𝗹𝗮𝗰𝗸 .\nمرحبا بك عزيزي {message.from_user.mention}\nهذا قسم الاوامر الخاص بسورس سبارك \nلمعرفة الاوامر اضغط على الأزرار بالأسفل👇\n**⩹━★⊷━⌞˛ 𝗦𝗼𝘂𝗿𝗰𝗲 𝗕𝗹𝗮𝗰𝗸 .""",
         reply_markup=InlineKeyboardMarkup(
             [
