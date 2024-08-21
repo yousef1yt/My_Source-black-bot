@@ -11,9 +11,9 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyb
 
 @app.on_message(filters.regex("^/start"), group=39)
 async def cpanel(_, message: Message):             
-        
+        text = ""
         kep = ReplyKeyboardMarkup([
-[" المطور", "• مطور السورس •"],
+["• مطور البوت •", "• مطور السورس •"],
 ["السورس","يـوتيوب "],
 ["اقتباس","استوري"],
 ["انمي","متحركه"],
@@ -28,6 +28,7 @@ async def cpanel(_, message: Message):
 ["افاتار بنات","افاتار شباب"],
 [" ¦ حذف الكيبورد"]], resize_keyboard=True)
         await message.reply(
+              text=text,
                reply_markup=kep,quote=True)
 
 @app.on_message(filters.command([" ¦ حذف الكيبورد"], ""))
