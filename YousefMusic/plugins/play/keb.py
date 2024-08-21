@@ -28,7 +28,6 @@ async def cpanel(_, message: Message):
 ["افاتار بنات","افاتار شباب"],
 [" ¦ حذف الكيبورد"]], resize_keyboard=True)
         await message.reply(
-              text=text,
                reply_markup=kep,quote=True)
 
 @app.on_message(filters.command([" ¦ حذف الكيبورد"], ""))
