@@ -27,8 +27,7 @@ async def سبارك_source(client: Client, message: Message):
                 [
                     InlineKeyboardButton(
                         "اوامر الجروبات", callback_data="gr"),
-                    InlineKeyboardButton(
-                        "اوامر القنوات", callback_data="ch"),  
+            
                  ],[
                     InlineKeyboardButton(
                         "اوامر الادمن", callback_data="adm"), 
