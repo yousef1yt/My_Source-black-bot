@@ -15,7 +15,7 @@ from random import  choice, randint
 
                 
 @app.on_message(
-    command(["سورس","سورس اكس","السورس"])
+    command(["سورس","• السورس •","السورس"])
     
 )
 async def huhh(client: Client, message: Message):
