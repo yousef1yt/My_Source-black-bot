@@ -10,7 +10,6 @@ from strings.filters import command
 def call_random_member(client, message):
     chat_id = message.chat.id
     members = [
-        member for member in client.iter_chat_members(chat_id)
         if not member.user.is_bot
     ]
     random_member = random.choice(members)
