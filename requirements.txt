@@ -23,6 +23,7 @@ SafoneAPI==1.0.65
 tgcrypto
 spotipy
 gTTS
+pyfiglet
 telegraph
 speedtest-cli
 unidecode
