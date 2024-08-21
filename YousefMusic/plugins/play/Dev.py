@@ -99,7 +99,7 @@ async def dev(client: Client, message: Message):
         pass
      await message.reply_photo(
      photo=photo,
-     caption=f"<b>• معلومات قلب رجب</b>\n\n<b>• 𝖭𝖺𝗆𝖾 : {name}</b>\n<b>• 𝖴𝗌𝖾 : @{username}</b>\n<b>• 𝖡𝗂𝗈 : {bio}</b>",
+     caption=f"<b>• معلومات قلب يوسف• 𝖭𝖺𝗆𝖾 : {name}</b>\n<b>• 𝖴𝗌𝖾 : @{username}</b>\n<b>• 𝖡𝗂𝗈 : {bio}</b>",
      reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"{name}", user_id=f"{user_id}")]]))
      try:
        os.remove(photo)
