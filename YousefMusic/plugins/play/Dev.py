@@ -39,7 +39,7 @@ OWNER = getenv("OWNER")
 
 
 
-@app.on_message(filters.command(["مطور السورس", "جو","يوسف"], ""))
+@app.on_message(filters.command(["مطور السورس", "• مطور السورس •","يوسف"], ""))
 async def dev(client: Client, message: Message):
      bot_username = client.me.username
      user = await client.get_chat(6094238403)
@@ -79,7 +79,7 @@ OWNER = getenv("OWNER")
 
 
 
-@app.on_message(filters.command(["فاطمه", "فطومه","فطوم"], ""))
+@app.on_message(filters.command(["• مبرمج السورس •", "فطومه","فطوم"], ""))
 async def dev(client: Client, message: Message):
      bot_username = client.me.username
      user = await client.get_chat(6763556715)
@@ -99,7 +99,7 @@ async def dev(client: Client, message: Message):
         pass
      await message.reply_photo(
      photo=photo,
-     caption=f"<b>• معلومات قلب يوسف• 𝖭𝖺𝗆𝖾 : {name}</b>\n<b>• 𝖴𝗌𝖾 : @{username}</b>\n<b>• 𝖡𝗂𝗈 : {bio}</b>",
+     caption=f"<b>•معلومات قلب يوسف• 𝖭𝖺𝗆𝖾 : {name}</b>\n<b>• 𝖴𝗌𝖾 : @{username}</b>\n<b>• 𝖡𝗂𝗈 : {bio}</b>",
      reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"{name}", user_id=f"{user_id}")]]))
      try:
        os.remove(photo)
