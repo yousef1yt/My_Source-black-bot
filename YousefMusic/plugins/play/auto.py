@@ -27,7 +27,7 @@ MESSAGE = f"""- اقوي بوت ميوزك قنوات و جروبات سرعه �
 BUTTON = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton("اضف البوت الي مجموعتك او قناتك ⚡, url=f"https://t.me/{app.username}?startgroup=True")
+            InlineKeyboardButton("اضف البوت الي مجموعتك او قناتك ⚡", url=f"https://t.me/{app.username}?startgroup=True")
         ]
     ]
 )
