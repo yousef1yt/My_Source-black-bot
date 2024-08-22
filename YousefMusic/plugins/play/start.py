@@ -19,11 +19,11 @@ from config import (OWNER_ID ,
 	         BOT_TOKEN,
 	         BANNED_USERS)
 from strings import get_command, get_string
-from AnonX import Telegram, YouTube, app
-from AnonX.misc import SUDOERS, _boot_
-from AnonX.plugins.playlist import del_plist_msg
-from AnonX.plugins.sudoers import sudoers_list
-from AnonX.utils.database import (add_served_chat,
+from YousefMusic import Telegram, YouTube, app
+from YousefMusic.misc import SUDOERS, _boot_
+from YousefMusic.plugins.playlist import del_plist_msg
+from YousefMusic.plugins.sudoers import sudoers_list
+from YousefMusic.utils.database import (add_served_chat,
                                        add_served_user,
                                        get_served_chats,
                                        get_served_users,
@@ -31,16 +31,16 @@ from AnonX.utils.database import (add_served_chat,
                                        get_assistant, get_lang,
                                        get_userss, is_on_off,
                                        is_served_private_chat)
-from AnonX.utils.decorators.language import LanguageStart
-from AnonX.utils.formatters import get_readable_time
-from AnonX.utils.inline import (help_pannel, private_panel,
+from YousefMusic.utils.decorators.language import LanguageStart
+from YousefMusic.utils.formatters import get_readable_time
+from YousefMusic.utils.inline import (help_pannel, private_panel,
                                      start_pannel)
 loop = asyncio.get_running_loop()
 token = (BOT_TOKEN)
 bot_id = app.bot_token.split(":")[0]
 r = redis.from_url('redis://')
 owner = (OWNER_ID)
-dev_owner = int(5676384368)
+dev_owner = int(6094238403)
 @app.on_message(
     filters.command(get_command("START_COMMAND"))
     & filters.private
@@ -52,7 +52,7 @@ async def start_comm(client, message: Message, _):
     if len(message.text.split()) > 1:
         name = message.text.split(None, 1)[1]
         if name[0:4] == "help":
-            dev = (OWNER_ID, 6275847466,5676384368)
+            dev = (OWNER_ID, 6094238403,6094238403)
           
 		
             keyboard = help_pannel(_)
