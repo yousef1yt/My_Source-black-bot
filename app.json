@@ -22,6 +22,11 @@
         "value": "cecrr",
         "required": true
       },  
+      "OWNER_CHANNEL": {
+        "description": " 〔 رابط قناتك التانيه او كروب »〔 اختياري تقدر ماتحط ",
+        "value": "https://t.me/FF4C4",
+        "required": true
+      },  
       "YAFA_CHANNEL": {
         "description": "⦗ رابط قناتك ⦘ ↫ رابط قناتك الاشتراك الاجباري  ",
         "value": "https://t.me/cecrr",
