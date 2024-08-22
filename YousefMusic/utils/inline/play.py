@@ -44,12 +44,13 @@ def stream_markup_timer(_, chat_id, played, dur):
                 callback_data="GetTimer",
             )
         ],[  
-            InlineKeyboardButton(text="انهاء", callback_data=f"ADMIN Stop|{chat_id}"),
-            InlineKeyboardButton(text="استكمال", callback_data=f"ADMIN Resume|{chat_id}"),
-            InlineKeyboardButton(text="ايقاف", callback_data=f"ADMIN Pause|{chat_id}"),
+            InlineKeyboardButton(text="ᎬΝᎠ", callback_data=f"ADMIN Stop|{chat_id}"),
+            InlineKeyboardButton(text="ᎡᎬՏႮᎷᎬ", callback_data=f"ADMIN Resume|{chat_id}"),
+            InlineKeyboardButton(text="ᏢᎪႮՏᎬ", callback_data=f"ADMIN Pause|{chat_id}"),
             
         ],[
             InlineKeyboardButton(text=_["S_B_9"], url=config.YAFA_CHANNEL),
+            InlineKeyboardButton(text=_["S_B_11"], url=config.OWNER_CHANNEL),
             
         ],[
             InlineKeyboardButton(text=_["S_B_10"], user_id=config.OWNER_ID),
@@ -62,12 +63,13 @@ def stream_markup_timer(_, chat_id, played, dur):
 def stream_markup(_, chat_id):
     buttons = [
         [
-            InlineKeyboardButton(text="انهاء", callback_data=f"ADMIN Stop|{chat_id}"),
-            InlineKeyboardButton(text="استكمال", callback_data=f"ADMIN Resume|{chat_id}"),
-            InlineKeyboardButton(text="ايقاف", callback_data=f"ADMIN Pause|{chat_id}"),
+            InlineKeyboardButton(text="ᎬΝᎠ", callback_data=f"ADMIN Stop|{chat_id}"),
+            InlineKeyboardButton(text="ᎡᎬՏႮᎷᎬ", callback_data=f"ADMIN Resume|{chat_id}"),
+            InlineKeyboardButton(text="ᏢᎪႮՏᎬ", callback_data=f"ADMIN Pause|{chat_id}"),
             
         ],[
             InlineKeyboardButton(text=_["S_B_9"], url=config.YAFA_CHANNEL),
+            InlineKeyboardButton(text=_["S_B_11"], url=config.OWNER_CHANNEL),
            
         ],[
             InlineKeyboardButton(text=_["S_B_10"], user_id=config.OWNER_ID),
