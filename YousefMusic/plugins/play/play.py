@@ -44,7 +44,7 @@ async def must_join_channel(app, msg):
                 link = chat_info.invite_link
             try:
                 await msg.reply(
-                    f"•عذرا on}\n• أشتࢪك في قناة البوت أولاً.\n•  انت غير مشترك عليك الأشتراك في قناة البوت \n•قناة البوت • @{CHANNEL_SUDO} •",
+                    f"• أشتࢪك في قناة البوت أولاً.\n•  انت غير مشترك عليك الأشتراك في قناة البوت \n•قناة البوت • @{CHANNEL_SUDO} ",
                     disable_web_page_preview=True,
                     reply_markup=InlineKeyboardMarkup([
                         [InlineKeyboardButton("• اضغط هنا للاشتراك •", url=link)]
