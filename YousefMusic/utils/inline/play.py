@@ -1,5 +1,7 @@
 import math
 
+import config
+
 from YousefMusic import app 
 
 from pyrogram.types import InlineKeyboardButton
@@ -47,11 +49,10 @@ def stream_markup_timer(_, chat_id, played, dur):
             InlineKeyboardButton(text="ايقاف", callback_data=f"ADMIN Pause|{chat_id}"),
             
         ],[
-            InlineKeyboardButton(text="ᏟᎻᎪΝΝᎬᏞ", url=f"https://t.me/cecrr"),
-            InlineKeyboardButton(text="ᏟᎻᎪΝΝᎬᏞ²", url=f"https://t.me/P_6_B"),
+            InlineKeyboardButton(text=_["S_B_3"], url=config.YAFA_CHANNEL),
             
         ],[
-            InlineKeyboardButton(text="𓏺 َ𝗬𝗼𝘂𝘀𝗲𝗳 .", url=f"https://t.me/y_o_v"),
+            InlineKeyboardButton(text=_["S_B_7"], user_id=config.OWNER_ID),
         ],[
             InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
@@ -66,11 +67,10 @@ def stream_markup(_, chat_id):
             InlineKeyboardButton(text="ايقاف", callback_data=f"ADMIN Pause|{chat_id}"),
             
         ],[
-            InlineKeyboardButton(text="ᏟᎻᎪΝΝᎬᏞ", url=f"https://t.me/cecrr"),
-            InlineKeyboardButton(text="ᏟᎻᎪΝΝᎬᏞ²", url=f"https://t.me/P_6_B"),
+            InlineKeyboardButton(text=_["S_B_3"], url=config.YAFA_CHANNEL),
            
         ],[
-            InlineKeyboardButton(text="𓏺 َ𝗬𝗼𝘂𝘀𝗲𝗳 .", url=f"https://t.me/y_o_v"),
+            InlineKeyboardButton(text=_["S_B_7"], user_id=config.OWNER_ID),
         ],[
             InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
