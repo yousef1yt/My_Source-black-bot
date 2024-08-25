@@ -19,9 +19,8 @@ def safe_getenv_bool(var_name, default):
     return value.lower() in ["true", "1", "yes"]
 
 # Get this value from my.telegram.org/apps
-API_ID = safe_getenv_int("API_ID", 8186557")
+API_ID = safe_getenv_int("API_ID", 8186557)
 API_HASH = getenv("API_HASH", "efd77b34c69c164ce158037ff5a0d117")
-
 # Get your token from @BotFather on Telegram.
 BOT_TOKEN = getenv("BOT_TOKEN")
 
