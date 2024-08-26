@@ -1,6 +1,6 @@
 
 ![Super-Music](https://graph.org/file/7e05de11143969215a815.jpg)
-تنصيب بوتات ميوزك
+
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=WELCOME+TO+SOURCE+B7R+TEAM+AN+Music+BOT)](https://github.com/FM8Y/Super-Music)
 
