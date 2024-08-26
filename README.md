@@ -10,10 +10,10 @@
 
 </h3>
 <p align="center">
-<a href="https://telegram.me/P_6_b"><img src="https://img.shields.io/badge/-Support%20Source-blue.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://telegram.me/BaarxXx"><img src="https://img.shields.io/badge/-Support%20Source-blue.svg?style=for-the-badge&logo=Telegram"></a>
 </p>
 <p align="center">
-<a href="https://telegram.me/cecrr"><img src="https://img.shields.io/badge/-Support%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://telegram.me/B_a_r"><img src="https://img.shields.io/badge/-Support%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
 </p>
 
 تم تطوير و تعريب الملف بواسطة [Yousef](https://t.me/Y_O_V)
