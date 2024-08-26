@@ -1,11 +1,11 @@
 import math
 
 import config
-
+from config import OWNER_ID
 from YousefMusic import app 
 
 from pyrogram.types import InlineKeyboardButton
-
+from pyrogram import Client
 from YousefMusic.utils.formatters import time_to_seconds
 
 
@@ -34,6 +34,8 @@ def track_markup(_, videoid, user_id, channel, fplay):
 def stream_markup_timer(_, chat_id, played, dur):
     played_sec = time_to_seconds(played)
     duration_sec = time_to_seconds(dur)
+    usr = await client.get_users(OWNER_ID)
+    name = usr.first_name
     percentage = (played_sec / duration_sec) * 100
     umm = math.floor(percentage)
 
@@ -50,9 +52,9 @@ def stream_markup_timer(_, chat_id, played, dur):
             
         ],[
             InlineKeyboardButton(text=_["S_B_9"], url=config.YAFA_CHANNEL),
-            InlineKeyboardButton(text=_["S_B_11"], url=config.OWNER_CHANNEL),
+            
         ],[
-            InlineKeyboardButton(text=_["S_B_10"], user_id=config.OWNER_ID),
+            InlineKeyboardButton(text="{name}", user_id=config.OWNER_ID),
         ],[
             InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
@@ -60,6 +62,8 @@ def stream_markup_timer(_, chat_id, played, dur):
 
 
 def stream_markup(_, chat_id):
+	usr = await client.get_users(OWNER_ID)
+	name = usr.first_name
     buttons = [
         [
             InlineKeyboardButton(text="انهاء", callback_data=f"ADMIN Stop|{chat_id}"),
@@ -68,10 +72,9 @@ def stream_markup(_, chat_id):
             
         ],[
             InlineKeyboardButton(text=_["S_B_9"], url=config.YAFA_CHANNEL),
-            InlineKeyboardButton(text=_["S_B_11"], url=config.OWNER_CHANNEL),
            
         ],[
-            InlineKeyboardButton(text=_["S_B_10"], user_id=config.OWNER_ID),
+            InlineKeyboardButton(text=_["name"], user_id=config.OWNER_ID),
         ],[
             InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
