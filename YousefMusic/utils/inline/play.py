@@ -62,8 +62,6 @@ def stream_markup_timer(_, chat_id, played, dur):
 
 
 def stream_markup(_, chat_id):
-	usr = await client.get_users(OWNER_ID)
-	name = usr.first_name
     buttons = [
         [
             InlineKeyboardButton(text="انهاء", callback_data=f"ADMIN Stop|{chat_id}"),
@@ -74,7 +72,7 @@ def stream_markup(_, chat_id):
             InlineKeyboardButton(text=_["S_B_9"], url=config.YAFA_CHANNEL),
            
         ],[
-            InlineKeyboardButton(text=_["name"], user_id=config.OWNER_ID),
+            InlineKeyboardButton(text="المطور", user_id=config.OWNER_ID),
         ],[
             InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
