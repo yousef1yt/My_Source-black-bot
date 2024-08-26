@@ -1,8 +1,8 @@
 
-![Super-Music](https://graph.org/file/32f98a4a846c8a9280034.jpg)
+![Super-Music](https://graph.org/file/7e05de11143969215a815.jpg)
 تنصيب بوتات ميوزك
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=WELCOME+TO+SOURCE-X+AN+Music+BOT)](https://github.com/FM8Y/Super-Music)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=WELCOME+TO+SOURCE+B7R+TEAM+AN+Music+BOT)](https://github.com/FM8Y/Super-Music)
 
 <p align="center">
     ─「 sᴜᴩᴩᴏʀᴛ 」─
@@ -23,12 +23,12 @@
 
 
 
-─「 [‹ Source X Music ›](https://t.me/P_6_B) 」─ 
+─「 [‹ سورس بحـٰࢪ - B7R TEAM ›](https://t.me/B_a_r) 」─ 
 
 
-  الــمــلــف بــحــقــوق ســورس [اكس](https://t.me/P_6_B)
+  الــمــلــف بــحــقــوق ســورس [بحـٰࢪ](https://t.me/B_a_r)
 
-غـيـر مـسـمـوح بـتـغـيـيـر حـقـوق [الـمـلـف](https://t.me/P_6_B)
+غـيـر مـسـمـوح بـتـغـيـيـر حـقـوق [الـمـلـف](https://t.me/B_a_r)
 
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"> <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
