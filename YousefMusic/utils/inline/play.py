@@ -1,16 +1,13 @@
 import math
 
 import config
-from config import OWNER_ID
+
 from YousefMusic import app 
 
 from pyrogram.types import InlineKeyboardButton
-from pyrogram import Client
+
 from YousefMusic.utils.formatters import time_to_seconds
 
-
-usr = await client.get_users(OWNER_ID)
-name = usr.first_name
 
 def track_markup(_, videoid, user_id, channel, fplay):
     buttons = [
@@ -53,9 +50,9 @@ def stream_markup_timer(_, chat_id, played, dur):
             
         ],[
             InlineKeyboardButton(text=_["S_B_9"], url=config.YAFA_CHANNEL),
-            
+            InlineKeyboardButton(text=_["S_B_11"], url=config.OWNER_CHANNEL),
         ],[
-            InlineKeyboardButton(text="{name}", user_id=config.OWNER_ID),
+            InlineKeyboardButton(text=_["S_B_10"], user_id=config.OWNER_ID),
         ],[
             InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
@@ -71,9 +68,10 @@ def stream_markup(_, chat_id):
             
         ],[
             InlineKeyboardButton(text=_["S_B_9"], url=config.YAFA_CHANNEL),
+            InlineKeyboardButton(text=_["S_B_11"], url=config.OWNER_CHANNEL),
            
         ],[
-            InlineKeyboardButton(text=_["name"], user_id=config.OWNER_ID),
+            InlineKeyboardButton(text=_["S_B_10"], user_id=config.OWNER_ID),
         ],[
             InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
