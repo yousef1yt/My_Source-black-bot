@@ -26,9 +26,9 @@ async def huhh(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "سورس ريال - source real", url=f"https://t.me/SOURCE_RAEL"), 
+                        "- source real", url=f"https://t.me/SOURCE_RAEL"), 
                  InlineKeyboardButton(
-                   "ياسر²¹( كرم الله وجهه بالجنه)",       url=f"https://t.me/ya_mo_0"), 
+                   "𓏺𝗬𝗮𝘀𝘀𝗲𝗿 .²¹",       url=f"https://t.me/ya_mo_0"), 
                  
              
              ],[ 
