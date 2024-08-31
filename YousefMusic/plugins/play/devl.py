@@ -20,20 +20,20 @@ from random import  choice, randint
 )
 async def huhh(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://te.legra.ph/file/064fe0dc07a2cba072718.jpg",
-        caption=f"• 𝗧𝗵𝗲 𝗕𝗲𝘀𝘁 𝗦𝗼𝘂𝗿𝗰𝗲 𝗢𝗻 𝗧𝗲𝗹𝗲𝗴𝗮𝗺 . 𝖠 ' 𝟣𝟣𝟣 . 🎸 .",
+        photo=f"https://te.legra.ph/file/1fcf060f8caa21b8b5179.jpg",
+        caption=f"• 𝗧𝗵𝗲 𝗕𝗲𝘀𝘁 𝗦𝗼𝘂𝗿𝗰𝗲 𝗢𝗻 𝗧𝗲𝗹𝗲𝗴𝗮𝗺  🎸 .",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "𖥻 𝗖𝗛𝗔𝗡𝗘𝗟 .", url=f"https://t.me/cecrr"), 
+                        "سورس ريال - source real", url=f"https://t.me/@SOURCE_RAEL"), 
                  InlineKeyboardButton(
-                   "‹ 𝗬𝗼𝘂𝘀𝗲𝗳 ›",       url=f"https://t.me/y_o_v"), 
+                   "ياسر²¹( كرم الله وجهه بالجنه)",       url=f"https://t.me/ya_mo_0"), 
                  
              
              ],[ 
             InlineKeyboardButton(
-                      "‹ لتنصيب بوت مماثل ›", url=f"https://t.me/y_o_v"), 
+                      "‹ لتنصيب بوت مماثل ›", url=f"https://t.me/ya_mo_0"), 
                       
              ],[ 
                   InlineKeyboardButton(
