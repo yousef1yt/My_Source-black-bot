@@ -6,7 +6,7 @@ from YousefMusic import app
 
 hmses = {}
 
-@app.on_message(filters.reply & (filters.regex("همسه") | filters.regex("اهمس")) & filters.group)
+@app.on_message(filters.reply & (filters.regex("ه") | filters.regex("اهمس")) & filters.group)
 async def reply_with_link(client, message):
     user_id = message.reply_to_message.from_user.id
     my_id = message.from_user.id
