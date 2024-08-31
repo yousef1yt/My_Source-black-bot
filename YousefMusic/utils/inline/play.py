@@ -52,7 +52,7 @@ def stream_markup_timer(_, chat_id, played, dur):
             InlineKeyboardButton(text=_["S_B_9"], url=config.YAFA_CHANNEL),
             InlineKeyboardButton(text=_["S_B_11"], url=config.OWNER_CHANNEL),
         ],[
-            InlineKeyboardButton(text=_["S_B_10"], user_id=config.OWNER_ID),
+            InlineKeyboardButton(text=_["S_B_7"], user_id=config.OWNER_ID),
         ],[
             InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
@@ -71,7 +71,7 @@ def stream_markup(_, chat_id):
             InlineKeyboardButton(text=_["S_B_11"], url=config.OWNER_CHANNEL),
            
         ],[
-            InlineKeyboardButton(text=_["S_B_10"], user_id=config.OWNER_ID),
+            InlineKeyboardButton(text=_["S_B_7"], user_id=config.OWNER_ID),
         ],[
             InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
