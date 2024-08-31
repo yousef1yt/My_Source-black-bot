@@ -33,7 +33,7 @@ async def huhh(client: Client, message: Message):
              
              ],[ 
             InlineKeyboardButton(
-                      "‹ لتنصيب بوت مماثل ›", url=f"https://t.me/ya_mo_0"), 
+                      "‹ لتنصيب بوت مماثل ›", url=f"https://t.me/SOURCE_RAEL/93"), 
                       
              ],[ 
                   InlineKeyboardButton(
