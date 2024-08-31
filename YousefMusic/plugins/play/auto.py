@@ -9,7 +9,7 @@ from YousefMusic import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, ap
 
 from YousefMusic.utils.database import get_served_chats
 
-from config import BANNED_USERS, lyrical, CHANNEL_SUDO, YAFA_NAME, YAFA_CHANNEL
+from config import BANNED_USERS, lyrical, YAFA_CHANNEL
 
 from YousefMusic.misc import SUDOERS
 
