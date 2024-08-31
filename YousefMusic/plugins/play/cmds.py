@@ -39,7 +39,6 @@ async def zdatsr(client: Client, message: Message):
                         "رجـوع", callback_data="zzzback"),
                 ],[
                     InlineKeyboardButton(name, url=f"https://t.me/{usrnam}"),
-                ],[
 
             ]
         ),
