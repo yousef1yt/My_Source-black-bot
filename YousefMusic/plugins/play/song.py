@@ -26,7 +26,7 @@ async def song(client, message):
     query = " ".join(message.command[1:])
     print(query)
     
-    m = await message.reply("جاري البحث لحظة...")
+    m = await message.reply("𝅘𝅥𝅮²¹جاري البحث لحظة...")
     
     ydl_opts = {
         "format": "bestaudio[ext=m4a]",
@@ -47,7 +47,7 @@ async def song(client, message):
         logging.error(f"Failed to fetch YouTube video: {str(e)}")
         return
     
-    await m.edit("جارٍ التنزيل... الرجاء الانتظار!")
+    await m.edit("𝅘𝅥𝅮²¹جارٍ التنزيل... الرجاء الانتظار!")
     
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
