@@ -40,8 +40,7 @@ async def zdatsr(client: Client, message: Message):
                 ],[
                     InlineKeyboardButton(name, url=f"https://t.me/{usrnam}"),
                 ],[
-                    InlineKeyboardButton(
-                        ". 𝖠 ' 𝟣𝟣𝟣 .", url="https://t.me/cecrr"),
+                    InlineKeyboardButton(text=_["S_B_3"], url=config.YAFA_CHANNEL),
                 ],
             ]
         ),
