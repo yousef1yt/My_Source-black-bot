@@ -23,7 +23,7 @@
         "required": true
       },  
       "YAFA_CHANNEL": {
-        "description": "⦗ رابط قناتك ⦘ ↫ رابط قناتك الاشتراك الاجباري  ",
+        "description": "⦗ رابط قناتك ⦘ ↫ رابط قناتك   ",
         "value": "https://t.me/cecrr",
         "required": true
         },
