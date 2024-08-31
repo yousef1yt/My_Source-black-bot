@@ -17,11 +17,6 @@
          "value": "7047183887:AAFA8pfgf9gt4vDy_1BnKzD2xLGPNUs4Rq8",
          "required": true
       },  
-      "CHANNEL_SUDO": {
-        "description": "يـــوزر قناة الاشتراك الاجباري »〔 بــدون @ 〕مــع رفــع البــوت إشــراف فــي القنــاة",
-        "value": "cecrr",
-        "required": true
-      },  
       "OWNER_CHANNEL": {
         "description": " 〔 رابط قناتك التانيه او كروب »〔 اختياري تقدر ماتحط ",
         "value": "https://t.me/FF4C4",
