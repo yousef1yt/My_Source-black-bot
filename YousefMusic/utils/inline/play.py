@@ -44,9 +44,9 @@ def stream_markup_timer(_, chat_id, played, dur):
                 callback_data="GetTimer",
             )
         ],[  
-            InlineKeyboardButton(text="انهاء", callback_data=f"ADMIN Stop|{chat_id}"),
-            InlineKeyboardButton(text="استكمال", callback_data=f"ADMIN Resume|{chat_id}"),
-            InlineKeyboardButton(text="ايقاف", callback_data=f"ADMIN Pause|{chat_id}"),
+            InlineKeyboardButton(text="ᎬŃᎠ", callback_data=f"ADMIN Stop|{chat_id}"),
+            InlineKeyboardButton(text="ᎡᎬՏႮᎷᎬ", callback_data=f"ADMIN Resume|{chat_id}"),
+            InlineKeyboardButton(text="ᏢᎪႮՏᎬ", callback_data=f"ADMIN Pause|{chat_id}"),
             
         ],[
             InlineKeyboardButton(text=_["DESIGN_BUTTON"], url=config.YAFA_CHANNEL),
@@ -62,16 +62,16 @@ def stream_markup_timer(_, chat_id, played, dur):
 def stream_markup(_, chat_id):
     buttons = [
         [
-            InlineKeyboardButton(text="انهاء", callback_data=f"ADMIN Stop|{chat_id}"),
-            InlineKeyboardButton(text="استكمال", callback_data=f"ADMIN Resume|{chat_id}"),
-            InlineKeyboardButton(text="ايقاف", callback_data=f"ADMIN Pause|{chat_id}"),
+            InlineKeyboardButton(text="ᎬŃᎠ", callback_data=f"ADMIN Stop|{chat_id}"),
+            InlineKeyboardButton(text="ᎡᎬՏႮᎷᎬ", callback_data=f"ADMIN Resume|{chat_id}"),
+            InlineKeyboardButton(text="ᏢᎪႮՏᎬ", callback_data=f"ADMIN Pause|{chat_id}"),
             
         ],[
             InlineKeyboardButton(text=_["DESIGN_BUTTON"], url=config.YAFA_CHANNEL),
             InlineKeyboardButton(text=_["ZTHON_BUTTON2"], url=config.OWNER_CHANNEL),
            
         ],[
-            InlineKeyboardButton(text=_["S_B_7"], user_id=config.OWNER_ID),
+            InlineKeyboardButton(text=_["ZTHON_BUTTON3"], user_id=config.OWNER_ID),
         ],[
             InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
