@@ -32,7 +32,7 @@ import os, requests
     & filters.group
     & ~BANNED_USERS
 )
-@app.on_message(filters.command(["play","فيد","cplay","cvplay",
+@app.on_message(filters.command(["play","vplay","cplay","cvplay",
             "playforce",
             "vplayforce",
             "cplayforce",
