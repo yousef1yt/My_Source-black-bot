@@ -46,14 +46,14 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/yousef1yt/My_Source-black-bot")
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv("GIT_TOKEN")
-CH_US = getenv("CH_US", "SOURCE_RAEL")
-YAFA_CHANNEL = getenv("YAFA_CHANNEL", "https://t.me/cecrr")# Fill this variable if your upstream repository is private
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/SOURCE_RAEL")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/SOURCE_RAEL")
-CHANNEL_NAME = getenv("CHANNEL_NAME", "سورس ريال - source real")
-CHANNEL_LINK = getenv("CHANNEL_LINK", "SOURCE_RAE")
+CH_US = getenv("CH_US", "c1xxv")
+YAFA_CHANNEL = getenv("YAFA_CHANNEL", "https://t.me/c1xxv")# Fill this variable if your upstream repository is private
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/c1xxv")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/c1xxv")
+CHANNEL_NAME = getenv("CHANNEL_NAME", "سورس حسين - source Hassen")
+CHANNEL_LINK = getenv("CHANNEL_LINK", "c1xxv")
 
-OWNER_CHANNEL = getenv("OWNER_CHANNEL", "https://t.me/FF4C4")
+OWNER_CHANNEL = getenv("OWNER_CHANNEL", "https://t.me/c1xxv")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = safe_getenv_bool("AUTO_LEAVING_ASSISTANT", False)
