@@ -6,17 +6,11 @@ from youtube_search import YoutubeSearch
 from YousefMusic import app
 import os
 
-def get_cookies_file():
-    folder_path = f"{os.getcwd()}/cookies"
-    txt_files = glob.glob(os.path.join(folder_path, '*.txt'))
-    if not txt_files:
-        raise FileNotFoundError("No .txt files found in the specified folder.")
-    cookie_txt_file = random.choice(txt_files)
-    return cookie_txt_file
+cookies_file = "YousefMusic/assets/cookies.txt"
 
-@app.on_message(filters.command(['يوت','حمل','بحث','نزل'],""))
+@app.on_message(filters.command(['نزل','حمل'],""))
 async def download_song(c,msg):
-  if msg.text == 'حمل' or msg.text == "بحث":
+  if msg.text == 'حمل' or msg.text == "نزل":
     return await msg.edit(f'<b> يجب كتابة {msg.text} + اسم الصوت الذي تريد تحميله</b>')
   else:
     name = msg.text.split(' ',1)[1]
@@ -45,7 +39,7 @@ async def download_song(c,msg):
         secmul *= 60
     await x.edit("<b>جاري الرفع انتظر...</b>")
     try:
-      if msg.text.split()[0] == 'بحث':
+      if msg.text.split()[0] == 'نزل':
         await app.send_audio(
           chat_id=msg.chat.id,
           audio=file_name,
