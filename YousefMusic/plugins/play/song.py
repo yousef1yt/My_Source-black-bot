@@ -1,13 +1,10 @@
-import os
-import glob
-import random
 import requests
-import yt_dlp
-import logging
-from pyrogram import filters
-from strings.filters import command
+from pyrogram import Client, filters
+from pyrogram.types import Message
+from yt_dlp import YoutubeDL 
 from youtube_search import YoutubeSearch
 from YousefMusic import app
+import os
 
 def get_cookies_file():
     folder_path = f"{os.getcwd()}/cookies"
@@ -17,67 +14,57 @@ def get_cookies_file():
     cookie_txt_file = random.choice(txt_files)
     return cookie_txt_file
 
-@app.on_message(command(["/song", "بحث", "تحميل", "تنزيل", "يوت", "yt"]))
-async def song(client, message):
-    user_id = message.from_user.id
-    user_name = message.from_user.first_name
-    chutiya = message.from_user.mention
-
-    query = " ".join(message.command[1:])
-    print(query)
-    
-    m = await message.reply("𝅘𝅥𝅮²¹جاري البحث لحظة...")
-    
-    ydl_opts = {
-        "format": "bestaudio[ext=m4a]",
-        "cookiefile": get_cookies_file()
-    }
-    
+@app.on_message(filters.command(['يوت','حمل','بحث','نزل'],""))
+async def download_song(c,msg):
+  if msg.text == 'حمل' or msg.text == "بحث":
+    return await msg.edit(f'<b> يجب كتابة {msg.text} + اسم الصوت الذي تريد تحميله</b>')
+  else:
+    name = msg.text.split(' ',1)[1]
+    x = await msg.reply(f'<b>• جاري البحث عن {name}</b>')
+    ydl_opts = {"format": "bestaudio[ext=m4a]","cookiefile": cookies_file} if msg.text.split()[0] == 'نزل' else {"format": "best","keepvideo": True,"prefer_ffmpeg": False,"geo_bypass": True,"outtmpl": "%(title)s.%(ext)s","quite": True, "cookiefile": cookies_file}
     try:
-        results = YoutubeSearch(query, max_results=1).to_dict()
-        link = f"https://youtube.com{results[0]['url_suffix']}"
-        title = results[0]["title"][:40]
-        thumbnail = results[0]["thumbnails"][0]
-        thumb_name = f"thumb{title}.jpg"
-        thumb = requests.get(thumbnail, allow_redirects=True)
-        open(thumb_name, "wb").write(thumb.content)
-
+      results = YoutubeSearch(name,max_results=1).to_dict()
+      link = f"https://youtube.com{results[0]['url_suffix']}"
+      title = results[0]["title"][:40]
+      thumbnail = results[0]["id"]
+      thumb_name = f"thumb{results[0]['id']}.jpg"
+      thumb = requests.get(f"https://img.youtube.com/vi/{thumbnail}/hqdefault.jpg", allow_redirects=True)
+      open(thumb_name, "wb").write(thumb.content)
+      duration = results[0]["duration"]
     except Exception as e:
-        await m.edit("لم يتم العثور على الأغنية، يرجى المحاولة مرة أخرى!")
-        logging.error(f"Failed to fetch YouTube video: {str(e)}")
-        return
+      return await msg.edit(f'<b>• حدث خطا :</b> \n {e}')
+    await x.edit('<b>• تم العثور وجاري التنزيل....</b>')  
+    with YoutubeDL(ydl_opts) as ytdl:
+      ytdl_data = ytdl.extract_info(link,download=True)
+      file_name = ytdl.prepare_filename(ytdl_data)
     
-    await m.edit("𝅘𝅥𝅮²¹جارٍ التنزيل... الرجاء الانتظار!")
-    
+    rep = f"<b>• {title}</b>\n<b>• powered by : @B_a_r</b>"
+    secmul, dur, dur_arr = 1, 0, duration.split(":")
+    for i in range(len(dur_arr) - 1, -1, -1):
+        dur += int(dur_arr[i]) * secmul
+        secmul *= 60
+    await x.edit("<b>جاري الرفع انتظر...</b>")
     try:
-        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-            info_dict = ydl.extract_info(link, download=False)
-            audio_file = ydl.prepare_filename(info_dict)
-            ydl.process_info(info_dict)
-        
-        rep = f"الاسم: {title[:25]}\nبواسطة: {chutiya}"
-        
-        await message.reply_audio(
-            audio_file,
-            caption=rep,
-            performer="@mmmsc.",
-            thumb=thumb_name,
-            title=title,
-        )
-        await m.delete()
-    
+      if msg.text.split()[0] == 'بحث':
+        await app.send_audio(
+          chat_id=msg.chat.id,
+          audio=file_name,
+          caption=rep,
+          thumb=thumb_name,
+          title=title,
+          duration=dur)
+      else:
+        await app.send_video(
+          chat_id=msg.chat.id,
+          video=file_name,
+          caption=rep,
+          thumb=thumb_name,
+          duration=dur)
+      await x.delete()
     except Exception as e:
-        await m.edit(f"[Victorious] **\n\**خطأ :** {e}")
-        logging.error(f"Error while downloading audio: {str(e)}")
-
-    finally:
-        try:
-            os.remove(audio_file)
-            os.remove(thumb_name)
-        except Exception as e:
-            logging.error(f"Failed to delete temporary files: {str(e)}")
-
-__mod_name__ = "اليوتيوب"
-__help__ = """
-بحث أو تحميل مع رابط الأغنية أو اسمها
-"""
+      return await msg.edit(f'<b>• حدث خطا :</b> \n {e}')
+    try:
+      os.remove(file_name)
+      os.remove(thumb_name)
+    except: pass
+    
