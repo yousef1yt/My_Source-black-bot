@@ -15,7 +15,7 @@ async def download_song(c,msg):
   else:
     name = msg.text.split(' ',1)[1]
     x = await msg.reply(f'<b>• جاري البحث عن {name}</b>')
-    ydl_opts = {"format": "bestaudio[ext=m4a]","cookiefile": cookies_file} if msg.text.split()[0] == 'نزل' else {"format": "best","keepvideo": True,"prefer_ffmpeg": False,"geo_bypass": True,"outtmpl": "%(title)s.%(ext)s","quite": True, "cookiefile": cookies_file}
+    ydl_opts = {"format": "bestaudio[ext=m4a]","cookiefile": cookies_file} if msg.text.split()[0] == 'بحث' else {"format": "best","keepvideo": True,"prefer_ffmpeg": False,"geo_bypass": True,"outtmpl": "%(title)s.%(ext)s","quite": True, "cookiefile": cookies_file}
     try:
       results = YoutubeSearch(name,max_results=1).to_dict()
       link = f"https://youtube.com{results[0]['url_suffix']}"
