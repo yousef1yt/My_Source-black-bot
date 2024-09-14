@@ -8,9 +8,9 @@ import os
 
 cookies_file = "YousefMusic/assets/cookies.txt"
 
-@app.on_message(filters.command(['نزل','حمل'],""))
+@app.on_message(filters.command(['بحث','حمل'],""))
 async def download_song(c,msg):
-  if msg.text == 'حمل' or msg.text == "نزل":
+  if msg.text == 'حمل' or msg.text == "بحث":
     return await msg.edit(f'<b> يجب كتابة {msg.text} + اسم الصوت الذي تريد تحميله</b>')
   else:
     name = msg.text.split(' ',1)[1]
@@ -32,14 +32,14 @@ async def download_song(c,msg):
       ytdl_data = ytdl.extract_info(link,download=True)
       file_name = ytdl.prepare_filename(ytdl_data)
     
-    rep = f"<b>• {title}</b>\n<b>• powered by : @B_a_r</b>"
+    rep = f"<b>• {title}</b>\n<b>• powered by : @SOURCE_RAEL</b>"
     secmul, dur, dur_arr = 1, 0, duration.split(":")
     for i in range(len(dur_arr) - 1, -1, -1):
         dur += int(dur_arr[i]) * secmul
         secmul *= 60
     await x.edit("<b>جاري الرفع انتظر...</b>")
     try:
-      if msg.text.split()[0] == 'نزل':
+      if msg.text.split()[0] == 'بحث':
         await app.send_audio(
           chat_id=msg.chat.id,
           audio=file_name,
