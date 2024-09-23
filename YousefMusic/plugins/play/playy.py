@@ -26,7 +26,7 @@ from config import BANNED_USERS, lyrical
 import os, requests
 
 
-@app.on_message(command(["شغل","تشغيل","ف"])
+@app.on_message(command(["شغل","تشغيل","فيد"])
     & filters.channel
     & ~BANNED_USERS
 )
