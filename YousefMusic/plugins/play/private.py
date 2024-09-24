@@ -14,7 +14,7 @@ async def forward_to_user(client: app, message: Message):
     if message.reply_to_message and message.reply_to_message.from_user.id != BOT_ID:
         await message.reply_to_message.forward(chat_id=message.reply_to_message.from_user.id)
 
-@app.on_message(filters.private & ~filters.user(YOUR_OWNER_ID))            
+@app.on_message(filters.private & ~filters.user(OWNER_ID))            
 async def forward_to_owner(client: app, message: Message):
     if message.from_user.id != BOT_ID:
         # توجيه رسالة المستخدم للمالك
