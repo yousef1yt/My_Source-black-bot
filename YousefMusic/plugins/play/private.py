@@ -2,9 +2,10 @@ import os
 import asyncio
 from YousefMusic import app
 from pyrogram import filters
+from config import OWNER_ID 
 from pyrogram.types import Message
 
-OWNER_
+OWNER_ID
 BOT_TOKEN = os.environ.get("BOT_TOKEN")
 BOT_ID = 6827222674
 
