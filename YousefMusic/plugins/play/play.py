@@ -63,7 +63,7 @@ async def must_join_channel(app, msg):
         [
             "تشغيل",
             "شغل",
-            "vplay",
+            "فيد",
             "cvplay",
             "playforce",
             "vplayforce",
